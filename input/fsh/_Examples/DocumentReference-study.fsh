@@ -1,4 +1,4 @@
-Instance: document-reference-pathology-report
+Instance: pathology-report
 InstanceOf: ILHDPDocumentReference
 Title: "Example ILHDP DocumentReference Pathology Report"
 Description: "Demonstrates ILHDP DocumentReference profile with required meta, identifiers, subject, author, type, date, content, and constraints"
@@ -25,9 +25,9 @@ Description: "Demonstrates ILHDP DocumentReference profile with required meta, i
 
 * authenticator = Reference(Practitioner/example)
 
-* type.coding[0].system = $vs-hdp-document-types
-* type.coding[0].code = #pathology-report
-* type.coding[0].display = "Pathology Report"
+* type.coding[0].system = $loinc
+* type.coding[0].code = #102009-8 
+* type.coding[0].display = "Clinical pathology Laboratory report"
 
 * date = "2025-09-10T15:30:00+02:00"
 
