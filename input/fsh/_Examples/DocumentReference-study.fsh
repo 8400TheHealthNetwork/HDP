@@ -1,4 +1,4 @@
-Instance: document-reference-pathology-report
+Instance: pathology-report
 InstanceOf: ILHDPDocumentReference
 Title: "Example ILHDP DocumentReference Pathology Report"
 Description: "Demonstrates ILHDP DocumentReference profile with required meta, identifiers, subject, author, type, date, content, and constraints"
