@@ -179,6 +179,7 @@ Inpatient care segments SHALL follow these rules:
 - `location[nursing-unit].location` SHALL be present.
 - `hospitalization` SHALL NOT be used.
 - `reasonCode[moh-reason-code]` SHALL NOT be used.
+- `reasonCode` or `reasonReference` SHOULD be populated when a segment-specific reason is known in the source system; it need not repeat the reason recorded on the parent hospitalization.
 
 For significant event segments:
 
@@ -360,7 +361,7 @@ These common rules apply across the regular IL-HDP encounter profiles unless a s
 - `serviceType` SHALL be present
 - `subject` SHALL be present and SHALL reference ILHDP Patient
 - `period` SHALL be present
-- `reasonCode` or `reasonReference` SHALL be present
+- reason requirements are profile-specific: `reasonCode` or `reasonReference` SHALL be present on top-level hospitalization and community/HMO/ambulatory encounters, but are optional on inpatient care segments
 - `participant.individual` SHALL be present whenever a participant is present
 
 ### 7.1 Type and participant slicing
@@ -391,11 +392,13 @@ Profile-specific expectations include:
 
 ### 7.2 Reason modeling
 
-Every encounter SHALL have a reason, represented as either:
+Top-level hospitalization and community/HMO/ambulatory encounters SHALL have a reason, represented as either:
 
 - `reasonCode`
 - `reasonReference`
 - or both
+
+For `ILHDPEncounterInpatientCareSegment`, `reasonCode` and `reasonReference` are optional. A segment-specific reason SHOULD be populated when known in the source system, particularly for significant-event segments. A unit-based segment does not need to repeat the reason recorded on its parent hospitalization merely to satisfy validation.
 
 The `reasonReference[patient-reported-chief-complaint]` slice MAY be used when the encounter includes a patient-reported chief complaint represented by `ILHDPPatientReportedChiefComplaint`.
 
