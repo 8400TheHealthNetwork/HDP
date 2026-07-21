@@ -17,6 +17,7 @@ Child encounter representing a unit-based segment or a significant event within 
 - Hospitalization details belong on the top-level encounter; `hospitalization.dischargeDisposition` is bound to [http://fhir.health.gov.il/ValueSet/patient-release-type-moh](http://fhir.health.gov.il/ValueSet/patient-release-type-moh) (extensible).
 - `diagnosis.use` is bound to [http://fhir.health.gov.il/ValueSet/il-core-diagnosis-role](http://fhir.health.gov.il/ValueSet/il-core-diagnosis-role) (extensible).
 - `reasonReference` allows ILCore Condition/Procedure/Observation/ImmunizationRecommendation and ILHDP Condition/Observation references; `ILHDPProcedure` and `ILHDPImmunizationRecommendation` are planned. The patient-reported chief complaint uses `ILHDPPatientReportedChiefComplaint`.
+- `reasonCode` and `reasonReference` are optional. A segment-specific reason SHOULD be populated when known in the source system, particularly for significant-event segments, but it need not repeat the reason recorded on the parent hospitalization.
 - `type[face-to-face]` SHALL NOT be combined with `type[virtual-encounters]` or `type[without-patient-present]`.
 - Participant slices for `consultant` and `reffering-practitioner` are inherited from ILCoreEncounter; `participant.individual` allows ILCore + HDP practitioner/practitionerRole/relatedPerson references.
 - `subject` references only the HDP Patient profile.
