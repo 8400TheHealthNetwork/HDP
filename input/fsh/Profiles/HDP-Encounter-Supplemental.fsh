@@ -10,6 +10,7 @@ Description: "Supplemental encounter profile for optional additional encounter c
 * ^status = #draft
 
 * meta only ILHDPMeta
+* meta 1..1
 * meta.security[HDP].code = $info-buckets#encounterInformation
 
 * type contains
