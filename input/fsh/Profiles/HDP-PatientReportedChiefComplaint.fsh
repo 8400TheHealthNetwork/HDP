@@ -17,12 +17,12 @@ Description: "HDP constraints for patient-reported chief complaint observation w
 
 * identifier 1..*
 
-* basedOn only Reference(ILCoreCarePlan or ILCoreDeviceRequest or ILCoreImmunizationRecommendation or ILCoreMedicationRequest or ILCoreNutritionOrder or ILCoreServiceRequest or $ILHDPServiceRequest)
-* partOf only Reference(ILCoreMedicationAdministration or ILCoreMedicationDispense or ILCoreProcedure or ILCoreImmunization or ILCoreImagingStudy or ILCoreMedicationStatement)
+* basedOn only Reference(ILCoreCarePlan or ILCoreDeviceRequest or ILHDPDeviceRequest or ILCoreImmunizationRecommendation or ILCoreMedicationRequest or ILHDPMedicationRequest or ILCoreNutritionOrder or ILCoreServiceRequest or $ILHDPServiceRequest)
+* partOf only Reference(ILCoreMedicationAdministration or ILHDPMedicationAdministration or ILCoreMedicationDispense or ILHDPMedicationDispense or ILCoreProcedure or ILCoreImmunization or ILCoreImagingStudy or ILCoreMedicationStatement or ILHDPMedicationStatement)
 * subject only Reference($ILHDPPatient)
 * encounter only Reference(ILCoreEncounter or ILHDPEncounterHospitalization or ILHDPEncounterInpatientCareSegment or ILHDPEncounterCommunityHMOAmbulatory)
 * performer only Reference(ILCorePractitioner or ILCorePractitionerRole or ILCoreOrganization or ILCoreCareTeam or ILCoreRelatedPerson or $ILHDPPractitioner or $ILHDPPractitionerRole or $ILHDPOrganization or $ILHDPCareTeam or $ILHDPRelatedPerson or $ILHDPPatient)
 * specimen only Reference(ILCoreSpecimen)
-* device only Reference(ILCoreDevice)
+* device only Reference(ILCoreDevice or ILHDPDevice)
 * hasMember only Reference(ILCoreObservation or ILCoreQuestionnaireResponse or ILCoreMolecularSequence or $ILHDPObservation)
-* derivedFrom only Reference(ILCoreDocumentReference or ILCoreImagingStudy or ILCoreMedia or ILCoreQuestionnaireResponse or ILCoreObservation or ILCoreMolecularSequence or $ILHDPObservation)
+* derivedFrom only Reference(ILCoreDocumentReference or ILHDPDocumentReference or ILCoreImagingStudy or ILCoreMedia or ILCoreQuestionnaireResponse or ILCoreObservation or ILCoreMolecularSequence or $ILHDPObservation)

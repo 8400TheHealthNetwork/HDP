@@ -18,10 +18,10 @@ Description: "Condition profile for HDP"
 // * verificationStatus 1..1
 * recordedDate 1..1
 * recorder 1..1
-* recorder only Reference(ILHDPPractitioner or ILHDPPractitionerRole or ILHDPPatient or ILCoreRelatedPerson or ILCorePractitioner or ILCorePractitionerRole)
+* recorder only Reference(ILHDPPractitioner or ILHDPPractitionerRole or ILHDPPatient or ILCoreRelatedPerson or ILHDPRelatedPerson or ILCorePractitioner or ILCorePractitionerRole)
 // * recorder.extension contains http://hl7.org/fhir/StructureDefinition/alternate-reference named alternate-reference 0..1
 * recorder.extension[alternate-reference].url = "http://hl7.org/fhir/StructureDefinition/alternate-reference" (exactly)
-* recorder.extension[alternate-reference].valueReference only Reference(ILHDPDevice)
-* asserter only Reference(ILCorePractitioner or ILCorePractitionerRole or ILHDPPractitioner or ILHDPPractitionerRole or ILHDPPatient or ILCoreRelatedPerson)
-* stage.assessment only Reference(ClinicalImpression or ILHDPDiagnosticReport or ILCoreDiagnosticReport or ILCoreObservation)
+* recorder.extension[alternate-reference].valueReference only Reference(ILCoreDevice or ILHDPDevice)
+* asserter only Reference(ILCorePractitioner or ILCorePractitionerRole or ILHDPPractitioner or ILHDPPractitionerRole or ILHDPPatient or ILCoreRelatedPerson or ILHDPRelatedPerson)
+* stage.assessment only Reference(ClinicalImpression or ILHDPDiagnosticReport or ILCoreDiagnosticReport or ILCoreObservation or ILHDPObservation)
 

@@ -14,8 +14,8 @@ Description: "Communication-Pathology profile for HDP"
 * subject 1..1
 * subject only Reference(ILHDPPatient)
 * recipient 1..*
-* recipient only Reference(ILCoreDevice or ILCoreOrganization or ILHDPOrganization  or 
+* recipient only Reference(ILCoreDevice or ILHDPDevice or ILCoreOrganization or ILHDPOrganization  or
                             ILHDPPatient or ILCorePractitioner or ILHDPPractitioner or ILCorePractitionerRole or
-                            ILHDPPractitionerRole or ILCoreRelatedPerson or ILHDPRelatedPerson or 
-                            ILCoreCareTeam or ILCoreHealthcareService)
+                            ILHDPPractitionerRole or ILCoreRelatedPerson or ILHDPRelatedPerson or
+                            ILCoreCareTeam or ILHDPCareTeam or ILCoreHealthcareService)
 * received 1..1

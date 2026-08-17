@@ -14,5 +14,5 @@ Description: "Vital Signs profile for HDP compliance."
 * identifier 1..*
 * subject only Reference(ILHDPPatient)
 * encounter only Reference(ILCoreEncounter)
-* performer only Reference(ILHDPPractitioner or ILHDPPractitionerRole or ILHDPOrganization or ILHDPCareTeam or ILHDPPatient or ILHDPRelatedPerson)
-* device only Reference(ILCoreDevice or DeviceMetric)
+* performer only Reference(ILCorePractitioner or ILHDPPractitioner or ILCorePractitionerRole or ILHDPPractitionerRole or ILCoreOrganization or ILHDPOrganization or ILCoreCareTeam or ILHDPCareTeam or ILHDPPatient or ILCoreRelatedPerson or ILHDPRelatedPerson)
+* device only Reference(ILCoreDevice or ILHDPDevice or DeviceMetric)

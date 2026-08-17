@@ -22,4 +22,4 @@ Description: "Patient profile for HDP"
 * contact.organization only Reference(ILCoreOrganization or ILHDPOrganization)
 * generalPractitioner only Reference(ILCoreOrganization or ILCorePractitioner or ILCorePractitionerRole or ILHDPOrganization or ILHDPPractitioner or ILHDPPractitionerRole)
 * managingOrganization only Reference(ILCoreOrganization or ILHDPOrganization)
-* link.other only Reference(ILHDPPatient or ILCoreRelatedPerson)
+* link.other only Reference(ILHDPPatient or ILCoreRelatedPerson or ILHDPRelatedPerson)

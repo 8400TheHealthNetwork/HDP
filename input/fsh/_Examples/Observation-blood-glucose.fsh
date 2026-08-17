@@ -12,8 +12,7 @@ Description: "Demonstrates ILHDP ObservationLab profile with meta, identifiers, 
 
 * meta.security[HDP].system = $info-buckets
 * meta.security[HDP].code = #laboratoryTests
-* meta.security[HDP].display = "בדיקות מעבדה"
-
+* meta.security[HDP].display = "בדיקות מעבדה" 
 * identifier[0].system = "http://hospital.hospitaliala.org/observations"
 * identifier[0].value = "OBS-2025-0001"
 * identifier[0].type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id
