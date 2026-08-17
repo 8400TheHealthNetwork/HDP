@@ -24,6 +24,7 @@ Description: "Example of an aspirin intolerance with reaction details"
 
 * code = http://snomed.info/sct#292044008 "Aspirin adverse reaction"
 * onsetDateTime = "2004"
+* recordedDate = "2004-05-12"
 
 * patient = Reference(Patient/patient-with-israeli-id)
 * recorder = Reference(Practitioner/practitioner-with-encrypted-israeli-id)
