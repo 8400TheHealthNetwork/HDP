@@ -19,10 +19,10 @@ Description: "MedicationAdministration profile for HDP"
 * medication[x] only CodeableConcept or Reference(ILCoreMedication or ILHDPMedication)
 // * medicationReference only Reference(ILCoreMedication or ILHDPMedication)
 * performer 1..*
-* performer.actor only Reference(ILCorePractitioner or ILHDPPractitioner or ILCorePractitionerRole or ILHDPPractitionerRole or ILHDPPatient or ILCoreRelatedPerson or ILCoreDevice)
-* reasonReference only Reference(ILCoreCondition or ILHDPCondition or ILCoreObservation or ILCoreDiagnosticReport or ILHDPDiagnosticReport)
+* performer.actor only Reference(ILCorePractitioner or ILHDPPractitioner or ILCorePractitionerRole or ILHDPPractitionerRole or ILHDPPatient or ILCoreRelatedPerson or ILHDPRelatedPerson or ILCoreDevice or ILHDPDevice)
+* reasonReference only Reference(ILCoreCondition or ILHDPCondition or ILCoreObservation or ILHDPObservation or ILCoreDiagnosticReport or ILHDPDiagnosticReport)
 * request only Reference(ILCoreMedicationRequest or ILHDPMedicationRequest)
-* device only Reference(ILCoreDevice)
+* device only Reference(ILCoreDevice or ILHDPDevice)
 * dosage 1..1
 // * dosage obeys medication-dose-rate-1
 * dosage.text 0..1

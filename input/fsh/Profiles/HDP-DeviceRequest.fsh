@@ -14,7 +14,7 @@ Description: "HDP constraints and extensions on the DeviceRequest Resource."
 * codeReference only Reference(ILCoreDevice or ILHDPDevice)
 * subject only Reference(ILHDPPatient or ILCoreLocation or ILHDPLocation or ILCoreDevice or ILHDPDevice)
 * requester 1..1
-* requester only Reference(ILCoreDevice or ILCoreDevice or ILCorePractitioner or ILHDPPractitionerRole or ILCorePractitionerRole or ILHDPPractitionerRole or ILCoreOrganization or ILHDPOrganization)
+* requester only Reference(ILCoreDevice or ILHDPDevice or ILCorePractitioner or ILHDPPractitioner or ILCorePractitionerRole or ILHDPPractitionerRole or ILCoreOrganization or ILHDPOrganization)
 * reasonReference only Reference(ILCoreCondition or ILHDPCondition or ILCoreObservation or ILHDPObservation or ILCoreDiagnosticReport or ILHDPDiagnosticReport or ILCoreDocumentReference or ILHDPDocumentReference)
 * authoredOn 1..1
 

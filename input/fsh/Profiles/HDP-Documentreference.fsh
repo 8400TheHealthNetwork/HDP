@@ -11,9 +11,9 @@ Description: "DocumentReference profile for HDP"
 * meta.security[HDP] from $vs-document-reference-meta (required)
 * identifier 1..*
 * subject 1..1
-* subject only Reference(ILHDPPatient or ILCoreDevice or ILHDPPractitioner or ILCorePractitioner)
+* subject only Reference(ILHDPPatient or ILCoreDevice or ILHDPDevice or ILHDPPractitioner or ILCorePractitioner)
 * author 1..*
-* author only Reference(ILCoreDevice or ILCorePractitioner or ILCorePractitionerRole or ILCoreRelatedPerson or ILCoreOrganization or 
+* author only Reference(ILCoreDevice or ILHDPDevice or ILCorePractitioner or ILCorePractitionerRole or ILCoreRelatedPerson or ILHDPRelatedPerson or ILCoreOrganization or
                         ILHDPPractitioner or ILHDPPractitionerRole or ILHDPPatient or ILHDPOrganization)
 * authenticator only Reference(ILCorePractitioner or ILCorePractitionerRole or ILCoreOrganization or 
                         ILHDPPractitioner or ILHDPPractitionerRole or ILHDPOrganization)
