@@ -8,6 +8,7 @@ Usage: #example
 * identifier.id = "hemoglobin-lab-test"
 * identifier.value = "LAB-2024-0002"
 * identifier.system = "http://goodcare.org/lab-test/id"
+* identifier.type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id
 * category[il-core].coding.system = "http://snomed.info/sct"
 * category[il-core].coding.code = #108252007
 * category[il-core].coding.display = "Laboratory procedure"

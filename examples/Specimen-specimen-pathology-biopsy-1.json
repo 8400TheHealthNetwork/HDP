@@ -16,7 +16,15 @@
   "identifier": [
     {
       "system": "http://specimen-ids.net/specimen-ids",
-      "value": "12345-biopsy-001"
+      "value": "12345-biopsy-001",
+      "type": {
+        "coding": [
+          {
+            "code": "strong-id",
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+          }
+        ]
+      }
     }
   ],
   "type": {

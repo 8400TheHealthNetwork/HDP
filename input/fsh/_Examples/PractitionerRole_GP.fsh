@@ -9,6 +9,7 @@ Usage: #example
 * meta.security[HDP].display = "מטפל"
 * identifier.system = "http://practitioners.health.gov.il/Practitioners"
 * identifier.value = "1-1234"
+* identifier.type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id
 * active = true
 * practitioner.reference = "Practitioner/practitioner-md"
 * location.reference = "Location/hospital-unit"

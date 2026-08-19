@@ -13,6 +13,7 @@ Usage: #example
 
 * identifier[+].system = "http://hospital1.check.org/episodes"
 * identifier[=].value = "HOSP1-RDH-2024-0001"
+* identifier[=].type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id
 
 * status = #finished
 * statusHistory[+].status = #active

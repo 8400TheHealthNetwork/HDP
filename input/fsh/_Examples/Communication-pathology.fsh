@@ -16,6 +16,7 @@ Description: "Demonstrates ILHDP Communication Pathology profile with meta, iden
 
 * identifier[0].system = "http://hospital.somethinghealth.org/communications"
 * identifier[0].value = "PATH-COMM-2025-0001"
+* identifier[0].type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id
 
 * status = #completed
 * subject = Reference(Patient/example)

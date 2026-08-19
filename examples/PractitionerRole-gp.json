@@ -20,7 +20,15 @@
   "identifier": [
     {
       "system": "http://practitioners.health.gov.il/Practitioners",
-      "value": "1-1234"
+      "value": "1-1234",
+      "type": {
+        "coding": [
+          {
+            "code": "strong-id",
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+          }
+        ]
+      }
     }
   ],
   "practitioner": {

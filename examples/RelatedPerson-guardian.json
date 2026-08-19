@@ -27,7 +27,15 @@
   "identifier": [
     {
       "system": "http://fhir.health.gov.il/identifier/il-national-id",
-      "value": "000000018"
+      "value": "000000018",
+      "type": {
+        "coding": [
+          {
+            "code": "strong-id",
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+          }
+        ]
+      }
     }
   ],
   "relationship": [

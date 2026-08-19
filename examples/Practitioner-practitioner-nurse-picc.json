@@ -24,7 +24,15 @@
     },
     {
       "system": "http://fhir.health.gov.il/identifier/encrypted-id-primary-moh",
-      "value": "gH4#%(1a"
+      "value": "tV6p*&@4h",
+      "type": {
+        "coding": [
+          {
+            "code": "strong-id",
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+          }
+        ]
+      }
     }
   ],
   "name": [

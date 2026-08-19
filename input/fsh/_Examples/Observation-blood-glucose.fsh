@@ -1,7 +1,7 @@
 Instance: blood-glucose
-InstanceOf: ILHDPObservation
-Title: "Example ILHDP Observation Blood Glucose"
-Description: "Demonstrates ILHDP Observation profile with meta, identifiers, subject, encounter, performer, specimen, and device"
+InstanceOf: ILHDPObservationLab
+Title: "Example ILHDP Observation Lab Blood Glucose"
+Description: "Demonstrates ILHDP ObservationLab profile with meta, identifiers, subject, encounter, performer, specimen, and device"
 
 * text.status = #generated
 * text.div = """
@@ -16,17 +16,20 @@ Description: "Demonstrates ILHDP Observation profile with meta, identifiers, sub
 
 * identifier[0].system = "http://hospital.hospitaliala.org/observations"
 * identifier[0].value = "OBS-2025-0001"
+* identifier[0].type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id
 
 * status = #final
-* category[0].coding[0].system = $obs-cat
-* category[0].coding[0].code = #laboratory
-* category[0].coding[0].display = "Laboratory"
+* category[il-core].coding.system = "http://snomed.info/sct"
+* category[il-core].coding.code = #108252007
+* category[il-core].coding.display = "Laboratory procedure"
 
 * code.coding[0].system = $loinc
 * code.coding[0].code = #2339-0
 * code.coding[0].display = "Glucose [Mass/volume] in Blood"
 
-* subject = Reference(Patient/example)
+* subject = Reference(Patient/patient-with-israeli-id)
+* subject.identifier.system = $il-id
+* subject.identifier.value = "000000018"
 * encounter = Reference(Encounter/example)
 
 * effectiveDateTime = "2025-09-10T09:30:00+02:00"
@@ -35,7 +38,7 @@ Description: "Demonstrates ILHDP Observation profile with meta, identifiers, sub
 * performer[0] = Reference(Practitioner/example)
 * performer[1] = Reference(Organization/example)
 
-* specimen = Reference(Specimen/example)
+* specimen = Reference(Specimen/serum-patient)
 
 * device = Reference(Device/example)
 
@@ -43,3 +46,6 @@ Description: "Demonstrates ILHDP Observation profile with meta, identifiers, sub
 * valueQuantity.unit = "mg/dL"
 * valueQuantity.system = $ucum
 * valueQuantity.code = #mg/dL
+
+* referenceRange.low = 70 'mg/dL' "mg/dL"
+* referenceRange.high = 140 'mg/dL' "mg/dL"

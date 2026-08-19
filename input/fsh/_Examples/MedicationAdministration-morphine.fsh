@@ -41,3 +41,4 @@ Description: "Example of a medication administration conforming to the HDP profi
 * dosage.rateRatio.denominator.system = "http://unitsofmeasure.org"
 * identifier.value = "med-admin-001"
 * identifier.system = "http://goodcare.org/meds/id"
+* identifier.type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id

@@ -1,0 +1,44 @@
+{
+  "resourceType": "Location",
+  "id": "hospital1-ward-a-room-12-bed-2",
+  "meta": {
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "organization"
+      }
+    ],
+    "profile": [
+      "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-location"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Hospital1 Ward A - Room 12 Bed 2</div>"
+  },
+  "identifier": [
+    {
+      "system": "http://hospital1.check.org/locations",
+      "value": "HOSP1-WARD-A-R12-B2",
+      "type": {
+        "coding": [
+          {
+            "code": "strong-id",
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+          }
+        ]
+      }
+    }
+  ],
+  "managingOrganization": {
+    "reference": "Organization/hospital1-ward-a"
+  },
+  "address": {
+    "line": [
+      "Rambam Hospital, Haifa"
+    ]
+  },
+  "status": "active",
+  "name": "Ward A Room 12 Bed 2",
+  "mode": "instance"
+}

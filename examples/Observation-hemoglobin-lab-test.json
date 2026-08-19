@@ -17,7 +17,15 @@
     {
       "id": "hemoglobin-lab-test",
       "value": "LAB-2024-0002",
-      "system": "http://goodcare.org/lab-test/id"
+      "system": "http://goodcare.org/lab-test/id",
+      "type": {
+        "coding": [
+          {
+            "code": "strong-id",
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+          }
+        ]
+      }
     }
   ],
   "category": [

@@ -13,6 +13,7 @@ Usage: #example
 
 * identifier[+].system = "http://hmo1.check.org/encounters"
 * identifier[=].value = "HMO1-GP-2024-0001"
+* identifier[=].type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id
 
 * status = #finished
 * class = $il-core-encounter-class#COMMUNITY-OR-HMO "Community Care/HMO setting"

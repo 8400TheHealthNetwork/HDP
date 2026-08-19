@@ -26,3 +26,4 @@ Description: "Example of a laboratory diagnostic report conforming to the HDP pr
 * result[1] = Reference(Observation/obs2) "HDL Cholesterol"
 * result[2] = Reference(Observation/obs3) "LDL Cholesterol"
 * identifier.value = "LAB-2024-0001"
+* identifier.type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id

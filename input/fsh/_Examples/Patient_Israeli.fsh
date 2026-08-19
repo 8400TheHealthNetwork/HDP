@@ -10,6 +10,7 @@ Usage: #example
 
 * identifier[0].system = $il-id
 * identifier[0].value = "000000018"
+* identifier[0].type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id
 * extension[hmo].valueCodeableConcept = $payer#103 "קופת חולים מכבי"
 * extension[parentName]
   * extension[given].valueString = "אברהם"

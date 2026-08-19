@@ -16,7 +16,15 @@
   "identifier": [
     {
       "value": "burned-ear",
-      "system": "http://goodcare.org/conditions/id"
+      "system": "http://goodcare.org/conditions/id",
+      "type": {
+        "coding": [
+          {
+            "code": "strong-id",
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+          }
+        ]
+      }
     }
   ],
   "category": [

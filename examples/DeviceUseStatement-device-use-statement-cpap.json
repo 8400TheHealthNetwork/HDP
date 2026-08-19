@@ -19,8 +19,16 @@
   },
   "identifier": [
     {
-      "system": "http://hospital.check.org/deviceusestatement",
-      "value": "DEVUSE-2025-0001"
+      "system": "http://hospital.hospitalia.org/deviceusestatement",
+      "value": "DEVUSE-2025-0001",
+      "type": {
+        "coding": [
+          {
+            "code": "strong-id",
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+          }
+        ]
+      }
     }
   ],
   "basedOn": [

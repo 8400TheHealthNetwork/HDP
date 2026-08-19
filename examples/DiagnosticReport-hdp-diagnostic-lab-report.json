@@ -2,24 +2,32 @@
   "resourceType": "DiagnosticReport",
   "id": "hdp-diagnostic-lab-report",
   "meta": {
-      "security":  [
-          {
-              "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
-              "code": "laboratoryTests",
-              "display": "בדיקות מעבדה"
-          }
-      ],
-      "profile":  [
-          "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-diagnostic-report"
-      ]
+    "profile": [
+      "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-diagnostic-report"
+    ],
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "laboratoryTests",
+        "display": "בדיקות מעבדה"
+      }
+    ]
   },
   "identifier": [
     {
-      "system": "http://goodcare.org/labs-tests/id",
-      "value": "12345"
+      "id": "lab-report",
+      "system": "http://goodcare.org/reports/id",
+      "value": "LAB-2024-0001",
+      "type": {
+        "coding": [
+          {
+            "code": "strong-id",
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+          }
+        ]
+      }
     }
   ],
-  "status": "final",
   "category": [
     {
       "coding": [
@@ -41,16 +49,6 @@
     ],
     "text": "Lipid Panel Report"
   },
-  "subject": {
-    "reference": "Patient/patient-with-israeli-id",
-    "display": "תמר כהן"
-  },
-  "encounter": {
-    "reference": "Encounter/breast-screaning",
-    "display": "Encounter with Dr. Smith"
-  },
-  "effectiveDateTime": "2024-11-05T14:30:00Z",
-  "issued": "2024-11-05T15:00:00Z",
   "performer": [
     {
       "reference": "Organization/ministry-of-health",
@@ -74,5 +72,16 @@
       "reference": "Observation/obs3",
       "display": "LDL Cholesterol"
     }
-  ]
+  ],
+  "status": "final",
+  "subject": {
+    "reference": "Patient/patient-with-israeli-id",
+    "display": "תמר כהן"
+  },
+  "encounter": {
+    "reference": "Encounter/breast-screaning",
+    "display": "Encounter with Dr. Smith"
+  },
+  "effectiveDateTime": "2024-11-05T14:30:00Z",
+  "issued": "2024-11-05T15:00:00Z"
 }

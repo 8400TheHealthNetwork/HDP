@@ -149,7 +149,15 @@
   "identifier": [
     {
       "value": "serum-specimen-from-patient-001",
-      "system": "http://specimen-ids.net/specimen-ids"
+      "system": "http://specimen-ids.net/specimen-ids",
+      "type": {
+        "coding": [
+          {
+            "code": "strong-id",
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+          }
+        ]
+      }
     }
   ],
   "status": "available",

@@ -13,6 +13,7 @@ Usage: #example
 * identifier[+].system = $legal-entity
 * identifier[=].value = "515555555"
 * identifier[=].use = #official
+* identifier[=].type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id
 * active = true
 * name = "HMO1"
 * type[moh-institute-type] = $institution-type-moh#73

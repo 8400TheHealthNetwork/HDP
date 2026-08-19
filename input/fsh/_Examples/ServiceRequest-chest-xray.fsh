@@ -5,6 +5,7 @@ Usage: #example
 * intent = #order
 * identifier.value = "SR12345"
 * identifier.system = "http://goodcare.org/service-req/id"
+* identifier.type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id
 * meta.security[HDP] = $info-buckets#diagnosticImaging "בדיקות דימות"
 * category[il-core].coding = $sct#363679005 "Imaging (procedure)"
 * category[il-core].text = "Imaging Order"

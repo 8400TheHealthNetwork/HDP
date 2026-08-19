@@ -13,6 +13,7 @@ Usage: #example
 
 * identifier[+].system = "http://hospital1.check.org/locations"
 * identifier[=].value = "HOSP1-WARD-B-NU1"
+* identifier[=].type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id
 
 * status = #active
 * name = "Hospital1 Ward B Nursing Unit 1"

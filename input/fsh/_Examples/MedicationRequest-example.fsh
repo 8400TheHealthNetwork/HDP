@@ -43,3 +43,4 @@ Description: "Example of a medication request conforming to the HDP profile"
 
 * substitution.allowedBoolean = true
 * identifier.value = "med-request-001"
+* identifier.type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id

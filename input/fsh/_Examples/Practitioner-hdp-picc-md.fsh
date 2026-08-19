@@ -14,6 +14,9 @@ Usage: #example
 
 * identifier[+].system = $practitioner-license-moh
 * identifier[=].value = "1-23456"
+* identifier[enc-il-id].system = "http://fhir.health.gov.il/identifier/encrypted-id-primary-moh"
+* identifier[enc-il-id].value = "qR7z*&@2f"
+* identifier[enc-il-id].type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id
 
 * active = true
 * name[English].family = "Feldman"
