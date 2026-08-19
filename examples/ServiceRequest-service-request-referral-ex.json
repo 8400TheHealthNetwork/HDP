@@ -1,0 +1,92 @@
+{
+  "resourceType": "ServiceRequest",
+  "id": "service-request-referral-ex",
+  "meta": {
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "referrals",
+        "display": "הפניות"
+      }
+    ],
+    "profile": [
+      "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-service-request-referral"
+    ]
+  },
+  "identifier": [
+    {
+      "system": "http://ex-hospital.health.gov.il/referral-ids",
+      "value": "REF-2026-000123"
+    }
+  ],
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "306206005",
+          "system": "http://snomed.info/sct",
+          "display": "Referral to service (procedure)"
+        }
+      ]
+    }
+  ],
+  "occurrencePeriod": {
+    "start": "2026-07-14",
+    "end": "2026-10-14"
+  },
+  "performer": [
+    {
+      "reference": "Organization/HMO1"
+    }
+  ],
+  "reasonReference": [
+    {
+      "reference": "ILHDPConditionExample1"
+    }
+  ],
+  "note": [
+    {
+      "text": "המטופל מבקש תיאום מראש בשל מגבלת ניידות."
+    }
+  ],
+  "extension": [
+    {
+      "url": "http://hdp.fhir.health.gov.il/StructureDefinition/ext-hdp-smoking-status",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "code": "77176002",
+            "system": "http://snomed.info/sct",
+            "display": "Smoker"
+          }
+        ]
+      }
+    },
+    {
+      "url": "http://hdp.fhir.health.gov.il/StructureDefinition/ext-hdp-pregnancy-status",
+      "valueBoolean": false
+    }
+  ],
+  "status": "active",
+  "intent": "order",
+  "code": {
+    "coding": [
+      {
+        "code": "183519002",
+        "system": "http://snomed.info/sct",
+        "display": "Referral to cardiology service (procedure)"
+      }
+    ]
+  },
+  "subject": {
+    "reference": "Patient/patient-with-israeli-id"
+  },
+  "encounter": {
+    "reference": "Encounter/hdp-community-hmo-ambulatory-gp-visit"
+  },
+  "authoredOn": "2026-07-14T09:30:00+03:00",
+  "requester": {
+    "reference": "PractitionerRole/gp"
+  },
+  "patientInstruction": "יש להגיע בצום של 8 שעות לפני הבדיקה."
+}

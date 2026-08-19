@@ -1,16 +1,29 @@
-// extensions
+// IL-HDP profiles
+Alias: $ILHDPPatient =                  http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-patient
+Alias: $ILHDPPractitioner =             http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-practitioner
+Alias: $ILHDPPractitionerRole =         http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-practitioner-role
+Alias: $ILHDPOrganization =             http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-organization
+Alias: $ILHDPServiceRequest =           http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-service-request
+Alias: $ILHDPCareTeam =                 http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-care-team
+Alias: $ILHDPCondition =                http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-condition
+Alias: $ILHDPObservation =              http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-observation
+Alias: $ILHDPLocation =                 http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-location
+Alias: $ILHDPRelatedPerson =            http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-related-person
+Alias: $ILHDPLocationNursingUnit =      http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-location-nursing-unit
+Alias: $ILHDPPatientReportedChiefComplaint = http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-patient-reported-chief-complaint
+Alias: $ILHDPServiceRequestReferral =   http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-service-request-referral
+
+
 Alias: $effective =    http://hl7.org/fhir/StructureDefinition/codesystem-effectiveDate
 Alias: $ext-processing-practitioner =  http://fhir.health.gov.il/StructureDefinition/ext-processing-practitioner
 Alias: $ext-language =                  http://hl7.org/fhir/StructureDefinition/language
-
-// Alias: $ext-processing-practitioner =  http://fhir.health.gov.il/StructureDefinition/ext-hdp-processing-practitioner
 Alias: $ext-processing-location =  http://fhir.health.gov.il/StructureDefinition/ext-processing-location
 Alias: $ext-specimen-collector-reference =  http://fhir.health.gov.il/StructureDefinition/ext-hdp-specimen-collector-reference
 Alias: $ext-qualification-practice =  http://fhir.health.gov.il/StructureDefinition/ext-qualification-practice
-// Codesystems
-Alias: $info-buckets = http://fhir.health.gov.il/cs/il-hdp-information-buckets
-Alias: $ucum =         http://unitsofmeasure.org
-Alias: $obs-cat =      http://terminology.hl7.org/CodeSystem/observation-category
+Alias: $ext-hdp-smoking-status =    http://hdp.fhir.health.gov.il/StructureDefinition/ext-hdp-smoking-status
+Alias: $ext-hdp-pregnancy-status =  http://hdp.fhir.health.gov.il/StructureDefinition/ext-hdp-pregnancy-status
+// Alias: $ext-processing-practitioner =  http://fhir.health.gov.il/StructureDefinition/ext-hdp-processing-practitioner
+
 
 // VSs
 Alias: $vs-info-buckets =  http://fhir.health.gov.il/ValueSet/il-hdp-information-buckets
@@ -27,31 +40,12 @@ Alias: $vs-document-reference-meta =  http://hdp.fhir.health.gov.il/ValueSet/il-
 Alias: $vs-hdp-document-types = http://hdp.fhir.health.gov.il/ValueSet/il-hdp-document-types
 Alias: $vs-il-hdp-organization-types = http://hdp.fhir.health.gov.il/ValueSet/il-hdp-organization-types
 Alias: $vs-hdp-doc-mime-types = http://hdp.fhir.health.gov.il/ValueSet/il-hdp-doc-mime-types
+Alias: $vs-il-hdp-service-request-referral-intent = http://hdp.fhir.health.gov.il/ValueSet/il-hdp-service-request-referral-intent
+Alias: $vs-il-hdp-smoking-status =                   http://hdp.fhir.health.gov.il/ValueSet/il-hdp-smoking-status
+Alias: $vs-il-core-diagnosis-role                    = http://fhir.health.gov.il/ValueSet/il-core-diagnosis-role
+Alias: $vs-patient-release-type-moh                  = http://fhir.health.gov.il/ValueSet/patient-release-type-moh
 
-Alias: $sct = http://snomed.info/sct
-Alias: $loinc =                         http://loinc.org
-Alias: $data-absent-reason =            http://hl7.org/fhir/StructureDefinition/data-absent-reason
-Alias: $DAB-CS =                        http://terminology.hl7.org/CodeSystem/data-absent-reason
-Alias: $il-id =                         http://fhir.health.gov.il/identifier/il-national-id
-Alias: $payer =                         http://fhir.health.gov.il/cs/paying-entity-moh
-Alias: $city-code =                     http://fhir.health.gov.il/cs/city-symbol
-Alias: $alternet-reference =            http://hl7.org/fhir/StructureDefinition/alternate-reference
-
-// IL-HDP profiles
-Alias: $ILHDPPatient =                  http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-patient
-Alias: $ILHDPPractitioner =             http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-practitioner
-Alias: $ILHDPPractitionerRole =         http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-practitioner-role
-Alias: $ILHDPOrganization =             http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-organization
-Alias: $ILHDPServiceRequest =           http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-service-request
-Alias: $ILHDPCareTeam =                 http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-care-team
-Alias: $ILHDPCondition =                http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-condition
-Alias: $ILHDPObservation =              http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-observation
-Alias: $ILHDPLocation =                 http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-location
-Alias: $ILHDPRelatedPerson =            http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-related-person
-Alias: $ILHDPLocationNursingUnit =      http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-location-nursing-unit
-Alias: $ILHDPPatientReportedChiefComplaint = http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-patient-reported-chief-complaint
-
-// Profiles
+// Profiles from IL Core
 Alias: $ILLocation                                   = http://fhir.health.gov.il/StructureDefinition/il-core-location
 Alias: $ILLocationNursingUnit                        = http://fhir.health.gov.il/StructureDefinition/il-core-location-nursing-unit
 Alias: $ILOrganization                               = http://fhir.health.gov.il/StructureDefinition/il-core-organization
@@ -60,7 +54,18 @@ Alias: $ext-resource-role-context                    = http://fhir.health.gov.il
 // Identifiers
 Alias: $legal-entity                                 = http://fhir.health.gov.il/identifier/legal-entity
 
-// CodeSystems
+// External CSs (including ILCore)
+Alias: $sct =                                          http://snomed.info/sct
+Alias: $loinc =                                        http://loinc.org
+Alias: $data-absent-reason =                           http://hl7.org/fhir/StructureDefinition/data-absent-reason
+Alias: $DAB-CS =                                       http://terminology.hl7.org/CodeSystem/data-absent-reason
+Alias: $il-id =                                        http://fhir.health.gov.il/identifier/il-national-id
+Alias: $payer =                                        http://fhir.health.gov.il/cs/paying-entity-moh
+Alias: $city-code =                                    http://fhir.health.gov.il/cs/city-symbol
+Alias: $alternet-reference =                           http://hl7.org/fhir/StructureDefinition/alternate-reference
+Alias: $info-buckets =                                 http://fhir.health.gov.il/cs/il-hdp-information-buckets
+Alias: $ucum =                                         http://unitsofmeasure.org
+Alias: $obs-cat =                                      http://terminology.hl7.org/CodeSystem/observation-category
 Alias: $condition-category                           = http://terminology.hl7.org/CodeSystem/condition-category
 Alias: $condition-clinical                           = http://terminology.hl7.org/CodeSystem/condition-clinical
 Alias: $condition-ver-status                         = http://terminology.hl7.org/CodeSystem/condition-ver-status
@@ -79,11 +84,6 @@ Alias: $hdp-mime-types =  urn:ietf:bcp:13
 Alias: $il-core-location-physical-type =            http://fhir.health.gov.il/cs/il-core-location-physical-type
 
 
-// ValueSets
-Alias: $vs-il-core-diagnosis-role                    = http://fhir.health.gov.il/ValueSet/il-core-diagnosis-role
-Alias: $vs-patient-release-type-moh                  = http://fhir.health.gov.il/ValueSet/patient-release-type-moh
-
-
 Alias: $il-core-diagnosis-role       = http://fhir.health.gov.il/cs/il-core-diagnosis-role
 Alias: $nurse-license-moh            = http://practitioners.health.gov.il/Nurses
 Alias: $practitioner-license-moh     = http://practitioners.health.gov.il/Practitioners
@@ -91,3 +91,4 @@ Alias: $practitioner-license-moh     = http://practitioners.health.gov.il/Practi
 
 // to DELETE
 Alias: $ext-device-dispense-when-handed-over = http://fhir.health.gov.il/StructureDefinition/ext-device-dispense-when-handed-over
+
