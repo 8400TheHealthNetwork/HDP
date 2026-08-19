@@ -20,5 +20,5 @@ Description: "Indicates the patient's smoking status as supporting information. 
 * ^context[6].expression = "Condition"
 * value[x] 1..1
 * value[x] only CodeableConcept
-* valueCodeableConcept from ILHDPSmokingStatus (required)
+* valueCodeableConcept from ILHDPSmokingStatus (extensible)
 * insert ConformanceMetadata
