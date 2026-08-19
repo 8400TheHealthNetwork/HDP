@@ -15,7 +15,7 @@ Description: "Specimen-Pathology profile for HDP"
 * identifier 1..*
 * type 1..1
 * subject 1..1
-* subject only Reference(ILHDPPatient or ILCoreDevice or ILHDPLocation or ILCoreLocation or ILCoreSubstance)
+* subject only Reference(ILHDPPatient or ILCoreDevice or ILHDPDevice or ILHDPLocation or ILCoreLocation or ILCoreSubstance or ILHDPSubstance)
 * receivedTime 1..1
 * request 1..*
 * collection.bodySite 1..1

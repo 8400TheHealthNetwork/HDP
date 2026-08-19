@@ -14,8 +14,8 @@ Description: "MedicationDispense profile for HDP"
 // * subject 1..1
 * identifier 1..*
 * subject only Reference(ILHDPPatient)
-* performer.actor only Reference(ILCorePractitioner or ILCorePractitionerRole or ILCoreOrganization or ILHDPOrganization or ILCoreDevice or ILCoreRelatedPerson or 
-                    ILHDPPractitioner or ILHDPPractitionerRole or ILHDPPatient or ILHDPPractitioner or ILHDPPractitionerRole or  ILHDPPatient or  ILHDPOrganization)
+* performer.actor only Reference(ILCorePractitioner or ILCorePractitionerRole or ILCoreOrganization or ILHDPOrganization or ILCoreDevice or ILHDPDevice or ILCoreRelatedPerson or ILHDPRelatedPerson or
+                    ILHDPPractitioner or ILHDPPractitionerRole or ILHDPPatient)
 * location only Reference(ILCoreLocation or ILHDPLocation)
 * authorizingPrescription only Reference(ILCoreMedicationRequest or ILHDPMedicationRequest)
 * destination only Reference(ILCoreLocation or ILHDPLocation)

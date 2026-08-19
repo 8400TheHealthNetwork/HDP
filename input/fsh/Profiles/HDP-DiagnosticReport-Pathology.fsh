@@ -18,8 +18,8 @@ Description: "DiagnosticReport-Pathology profile for HDP"
 * meta.security[HDP].display = "פתולוגיה" (exactly)
 * identifier 1..*
 * subject 1..1
-* subject only Reference(ILHDPPatient or ILHDPLocation or ILCoreLocation or ILCoreDevice)
-* basedOn only Reference(ILCoreCarePlan or ILCoreImmunizationRecommendation or ILHDPMedicationRequest or ILCoreNutritionOrder or ILCoreServiceRequest or
+* subject only Reference(ILHDPPatient or ILHDPLocation or ILCoreLocation or ILCoreDevice or ILHDPDevice)
+* basedOn only Reference(ILCoreCarePlan or ILCoreImmunizationRecommendation or ILHDPMedicationRequest or ILCoreNutritionOrder or ILCoreServiceRequest or ILHDPServiceRequest or
                         ILCoreMedicationRequest)
 * performer only Reference(ILCorePractitioner or ILCorePractitionerRole or ILCoreOrganization or ILCoreCareTeam or 
                         ILHDPPractitioner or ILHDPPractitionerRole or ILHDPOrganization or ILHDPCareTeam)

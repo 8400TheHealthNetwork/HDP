@@ -25,13 +25,13 @@ Description: "MedicationStatement profile for HDP"
 * dosage.site 0..1
 * dosage.method 0..1
 * dosage.route 0..1
-* basedOn only Reference(ILCoreCarePlan or ILCoreMedicationRequest or ILHDPMedicationRequest or ILCoreServiceRequest)
-* partOf only Reference(ILCoreMedicationAdministration or ILCoreMedicationDispense or ILCoreMedicationStatement or ILCoreProcedure or ILCoreObservation or ILHDPMedicationAdministration or ILHDPMedicationDispense or ILHDPMedicationStatement or ILCoreProcedure)
+* basedOn only Reference(ILCoreCarePlan or ILCoreMedicationRequest or ILHDPMedicationRequest or ILCoreServiceRequest or ILHDPServiceRequest)
+* partOf only Reference(ILCoreMedicationAdministration or ILCoreMedicationDispense or ILCoreMedicationStatement or ILCoreProcedure or ILCoreObservation or ILHDPObservation or ILHDPMedicationAdministration or ILHDPMedicationDispense or ILHDPMedicationStatement)
 * medication[x] only CodeableConcept or Reference(ILCoreMedication or ILHDPMedication)
 // * medicationReference only Reference(ILCoreMedication or ILHDPMedication)
 * subject only Reference(ILHDPPatient)
-* informationSource only Reference(ILCorePractitioner or ILCorePractitionerRole or ILCoreRelatedPerson or ILCoreOrganization or ILHDPPatient or ILHDPPractitioner or ILHDPPractitionerRole or ILHDPOrganization)
-* reasonReference only Reference(ILCoreCondition or ILCoreObservation or ILCoreDiagnosticReport or ILHDPCondition or ILHDPDiagnosticReport)
+* informationSource only Reference(ILCorePractitioner or ILCorePractitionerRole or ILCoreRelatedPerson or ILHDPRelatedPerson or ILCoreOrganization or ILHDPPatient or ILHDPPractitioner or ILHDPPractitionerRole or ILHDPOrganization)
+* reasonReference only Reference(ILCoreCondition or ILCoreObservation or ILHDPObservation or ILCoreDiagnosticReport or ILHDPCondition or ILHDPDiagnosticReport)
 
 
 

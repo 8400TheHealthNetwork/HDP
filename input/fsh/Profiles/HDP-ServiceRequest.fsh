@@ -23,9 +23,9 @@ Description: "Defines the ServiceRequest resource for HDP compliance."
 * note 1..*
 // * text 1..1
 
-* subject only Reference(ILHDPPatient or ILCoreGroup or ILHDPLocation)
+* subject only Reference(ILHDPPatient or ILCoreGroup or ILCoreLocation or ILHDPLocation)
 * encounter only Reference(ILCoreEncounter)
-* requester only Reference(ILHDPPractitioner or ILHDPPractitionerRole or ILHDPOrganization or ILHDPPatient or ILHDPRelatedPerson or ILCoreDevice)
-* performer only Reference(ILHDPPractitioner or ILHDPPractitionerRole or ILHDPOrganization or ILHDPCareTeam or ILHDPPatient or ILHDPRelatedPerson or ILCoreDevice)
-* reasonReference only Reference(ILHDPCondition or ILHDPObservation or ILHDPDiagnosticReport or ILHDPDocumentReference)
-* supportingInfo only Reference(ILHDPCondition or ILHDPObservation or ILHDPDocumentReference or ILHDPMedication or ILCoreDevice or ILCoreProcedure)
+* requester only Reference(ILCorePractitioner or ILHDPPractitioner or ILCorePractitionerRole or ILHDPPractitionerRole or ILCoreOrganization or ILHDPOrganization or ILHDPPatient or ILCoreRelatedPerson or ILHDPRelatedPerson or ILCoreDevice or ILHDPDevice)
+* performer only Reference(ILCorePractitioner or ILHDPPractitioner or ILCorePractitionerRole or ILHDPPractitionerRole or ILCoreOrganization or ILHDPOrganization or ILCoreCareTeam or ILHDPCareTeam or ILHDPPatient or ILCoreRelatedPerson or ILHDPRelatedPerson or ILCoreDevice or ILHDPDevice)
+* reasonReference only Reference(ILCoreCondition or ILHDPCondition or ILCoreObservation or ILHDPObservation or ILCoreDiagnosticReport or ILHDPDiagnosticReport or ILCoreDocumentReference or ILHDPDocumentReference)
+* supportingInfo only Reference(ILCoreCondition or ILHDPCondition or ILCoreObservation or ILHDPObservation or ILCoreDocumentReference or ILHDPDocumentReference or ILCoreMedication or ILHDPMedication or ILCoreDevice or ILHDPDevice or ILCoreProcedure)
