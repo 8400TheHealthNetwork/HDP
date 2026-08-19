@@ -6,6 +6,7 @@ Description: "HDP constraints for nursing-unit locations with security tagging. 
 
 * ^url = "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-location-nursing-unit"
 * insert ConformanceMetadata
+* . obeys one-strong-identifier
 * ^status = #draft
 
 * meta only ILHDPMeta

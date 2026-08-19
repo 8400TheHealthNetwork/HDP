@@ -6,6 +6,7 @@ Description: "Top-level encounter in the HDP hierarchical hospitalization model.
 
 * ^url = "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-encounter-hospitalization"
 * insert ConformanceMetadata
+* . obeys one-strong-identifier
 * ^status = #draft
 
 * insert ILHDPEncounterCommon

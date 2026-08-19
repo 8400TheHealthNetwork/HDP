@@ -6,6 +6,7 @@ Description: "HDP constraints for EpisodeOfCare with security tagging. Used to r
 
 * ^url = "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-episode-of-care"
 * insert ConformanceMetadata
+* . obeys one-strong-identifier
 * ^status = #draft
 
 * meta only ILHDPMeta
