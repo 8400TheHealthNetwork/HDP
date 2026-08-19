@@ -16,6 +16,7 @@ Description: "Demonstrates ILHDP DeviceRequest profile with required meta, ident
 
 * identifier[0].system = "http://hospital.hospitalia.org/device-requests"
 * identifier[0].value = "DR-2025-0001"
+* identifier[0].type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id
 
 * meta.security[HDP].system = $info-buckets
 * meta.security[HDP].code = #medications

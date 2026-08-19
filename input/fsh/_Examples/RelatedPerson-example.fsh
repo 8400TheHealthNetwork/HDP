@@ -8,6 +8,7 @@ Description: "An example instance of the ILCore RelatedPerson profile."
 * extension[parentName].extension[given].valueString = "John Doe Sr."
 * identifier[il-id].system = $il-id
 * identifier[il-id].value = "000000018"
+* identifier[il-id].type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id
 * active = true
 * patient = Reference(patient-with-israeli-id)
 * relationship[0].coding[0] = http://terminology.hl7.org/CodeSystem/v3-RoleCode#GUARD "Guardian"

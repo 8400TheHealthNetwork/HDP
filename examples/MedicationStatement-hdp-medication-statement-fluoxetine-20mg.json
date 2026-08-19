@@ -1,21 +1,20 @@
 {
   "resourceType": "MedicationStatement",
-  "id": "hdp-medicationStatement-fluoxetine-20-mg",
-"meta": {
-      "security":  [
-          {
-              "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
-              "code": "medications",
-              "display": "תרופות"
-          }
-      ],
-      "profile":  [
-          "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-medication-statement"
-      ]
+  "id": "hdp-medication-statement-fluoxetine-20mg",
+  "meta": {
+    "profile": [
+      "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-medication-statement"
+    ],
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "medications",
+        "display": "תרופות"
+      }
+    ]
   },
   "extension": [
     {
-      "url": "http://fhir.health.gov.il/StructureDefinition/ext-medication-course-of-therapy-type",
       "valueCodeableConcept": {
         "coding": [
           {
@@ -24,20 +23,29 @@
             "display": "Continuous long term therapy"
           }
         ]
-      }
+      },
+      "url": "http://fhir.health.gov.il/StructureDefinition/ext-medication-course-of-therapy-type"
     }
   ],
   "text": {
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Active medication statement reported by a practitioner regarding a patient in a long term care facility for long-term, continuous use of 20mg/day Prozac (Fluoxetine) taken each morning.</div>",
-    "status": "generated"
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Active medication statement reported by a practitioner regarding a patient in a long term care facility for long-term, continuous use of 20mg/day Prozac (Fluoxetine) taken each morning.</div>"
   },
-    "identifier": [
+  "identifier": [
     {
-      "system": "http://hospital.check.org/medication-statements",
-      "value": "MS-2025-0001"
+      "id": "med-statement",
+      "system": "http://goodcare.org/med-stat/id",
+      "value": "med-statement-001",
+      "type": {
+        "coding": [
+          {
+            "code": "strong-id",
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+          }
+        ]
+      }
     }
   ],
-  "status": "active",
   "category": {
     "coding": [
       {
@@ -56,27 +64,12 @@
       }
     ]
   },
-  "informationSource": {
-    "reference": "Practitioner/1",
-    "type": "Practitioner"
-  },
   "effectivePeriod": {
     "start": "2022-10-05",
     "end": "2022-10-10"
   },
-  "dateAsserted": "2022-07-30",
-  "subject": {
-    "reference": "Patient/patient-with-israeli-id",
-    "type": "Patient",
-    "display": "תמר כהן"
-  },
-  "context": {
-    "reference": "Encounter/123",
-    "type": "Encounter"
-  },
   "dosage": [
     {
-      "text": "20mg per day every morning",
       "site": {
         "extension": [
           {
@@ -108,8 +101,8 @@
           "doseQuantity": {
             "value": 20,
             "unit": "mg",
-            "code": "mg",
-            "system": "http://unitsofmeasure.org"
+            "system": "http://unitsofmeasure.org",
+            "code": "mg"
           },
           "rateRatio": {
             "numerator": {
@@ -130,7 +123,19 @@
             "MORN"
           ]
         }
-      }
+      },
+      "text": "20mg per day every morning"
     }
-  ]
+  ],
+  "status": "active",
+  "informationSource": {
+    "reference": "Practitioner/1"
+  },
+  "dateAsserted": "2022-07-30",
+  "subject": {
+    "reference": "Patient/patient-with-israeli-id"
+  },
+  "context": {
+    "reference": "Encounter/123"
+  }
 }

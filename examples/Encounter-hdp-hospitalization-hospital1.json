@@ -20,7 +20,15 @@
   "identifier": [
     {
       "system": "http://hospital1.check.org/encounters",
-      "value": "HOSP1-ADM-2024-0001"
+      "value": "HOSP1-ADM-2024-0001",
+      "type": {
+        "coding": [
+          {
+            "code": "strong-id",
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+          }
+        ]
+      }
     }
   ],
   "statusHistory": [

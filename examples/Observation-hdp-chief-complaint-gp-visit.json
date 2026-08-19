@@ -20,7 +20,15 @@
   "identifier": [
     {
       "system": "http://hmo1.check.org/observations",
-      "value": "HMO1-CC-GP-2024-0001"
+      "value": "HMO1-CC-GP-2024-0001",
+      "type": {
+        "coding": [
+          {
+            "code": "strong-id",
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+          }
+        ]
+      }
     }
   ],
   "subject": {

@@ -9,6 +9,7 @@ Usage: #example
 * meta.security[HDP].display = "מטפל"
 * identifier[enc-il-id].system = "http://fhir.health.gov.il/identifier/encrypted-id-primary-moh"
 * identifier[enc-il-id].value = "gH45*&@1a"
+* identifier[enc-il-id].type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id
 * active = true
 * name[Hebrew].prefix = "דר'"
 * name[Hebrew].family = "ברקוביץ"

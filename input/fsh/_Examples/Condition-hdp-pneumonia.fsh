@@ -12,6 +12,7 @@ Usage: #example
 
 * identifier[+].system = "http://hospital1.check.org/conditions"
 * identifier[=].value = "HOSP1-COND-0001"
+* identifier[=].type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id
 * recordedDate = "2024-11-28"
 
 * clinicalStatus = $condition-clinical#active

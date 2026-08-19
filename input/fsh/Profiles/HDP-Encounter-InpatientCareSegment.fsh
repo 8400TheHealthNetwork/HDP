@@ -6,6 +6,7 @@ Description: "Child encounter representing a clinically coherent care segment or
 
 * ^url = "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-encounter-inpatient-care-segment"
 * insert ConformanceMetadata
+* . obeys one-strong-identifier
 * ^status = #draft
 
 * insert ILHDPEncounterCommon

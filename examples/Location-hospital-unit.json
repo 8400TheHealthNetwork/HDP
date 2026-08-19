@@ -33,11 +33,11 @@
     ],
     "extension": [
       {
-        "url": "http://fhir.health.gov.il/StructureDefinition/ext-statistical-area",
         "valueIdentifier": {
           "system": "http://fhir.health.gov.il/identifier/cbs-statistical-area",
           "value": "4000416"
-        }
+        },
+        "url": "http://fhir.health.gov.il/StructureDefinition/ext-statistical-area"
       }
     ],
     "use": "work",
@@ -65,22 +65,27 @@
   "identifier": [
     {
       "system": "http://rambam.co.il/department",
-      "value": "010011"
+      "value": "010011",
+      "type": {
+        "coding": [
+          {
+            "code": "strong-id",
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+          }
+        ]
+      }
     }
   ],
-  "status": "active",
-  "name": "פנימית א' בית חולים רמב\"ם",
   "type": [
     {
       "coding": [
         {
-          "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
-          "code": "HU"
+          "code": "HU",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
         }
       ]
     }
   ],
-  "description": "Second floor of the old south wing",
   "telecom": [
     {
       "system": "phone",
@@ -93,11 +98,14 @@
       "allDay": true
     }
   ],
-  "managingOrganization": {
-    "reference": "Organization/ministry-of-health"
-  },
   "position": {
     "longitude": 32.232325,
     "latitude": 34.253251
+  },
+  "status": "active",
+  "name": "פנימית א' בית חולים רמב\"ם",
+  "description": "Second floor of the old south wing",
+  "managingOrganization": {
+    "reference": "Organization/ministry-of-health"
   }
 }

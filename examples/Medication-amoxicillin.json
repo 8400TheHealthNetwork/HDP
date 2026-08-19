@@ -19,8 +19,16 @@
   },
   "identifier": [
     {
-      "system": "http://hospital.check.org/medications",
+      "system": "http://hospital.hospitalia.org/medications",
       "value": "MED-2025-0001",
+      "type": {
+        "coding": [
+          {
+            "code": "strong-id",
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+          }
+        ]
+      },
       "assigner": {
         "reference": "Organization/example"
       }
@@ -29,16 +37,16 @@
   "code": {
     "coding": [
       {
-        "system": "http://fhir.health.gov.il/ValueSet/il-core-medication-code",
-        "code": "123456",
-        "display": "Amoxicillin 500mg capsule"
+        "system": "http://snomed.info/sct",
+        "code": "374646004",
+        "display": "Product containing precisely amoxicillin 500 milligram/1 each conventional release oral tablet (clinical drug)"
       }
     ]
   },
   "form": {
     "coding": [
       {
-        "system": "http://www.snomed.org/sct",
+        "system": "http://snomed.info/sct",
         "code": "420692007",
         "display": "Oral capsule"
       }

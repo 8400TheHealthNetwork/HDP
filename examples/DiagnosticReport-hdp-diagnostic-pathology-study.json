@@ -13,11 +13,19 @@
       "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-diagnostic-report"
     ]
   },
-  "status": "final",
   "identifier": [
     {
-      "system": "http://hospital.check.org/pathology-study-id",
-      "value": "PS-2025-0001"
+      "id": "pathology-study",
+      "value": "PATH-2024-0002",
+      "system": "http://goodcare.org/reports/id",
+      "type": {
+        "coding": [
+          {
+            "code": "strong-id",
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+          }
+        ]
+      }
     }
   ],
   "code": {
@@ -30,16 +38,6 @@
     ],
     "text": "Pathology study"
   },
-  "subject": {
-    "reference": "Patient/patient-with-israeli-id",
-    "display": "תמר כהן"
-  },
-  "encounter": {
-    "reference": "Encounter/skin-biopsy",
-    "display": "Encounter with Dr. Smith"
-  },
-  "effectiveDateTime": "2024-11-05T14:30:00Z",
-  "issued": "2024-11-05T15:00:00Z",
   "performer": [
     {
       "reference": "Organization/acme-labs",
@@ -56,16 +54,27 @@
       "display": "Microscopic examination of skin biopsy"
     }
   ],
-  "conclusion": "The skin biopsy reveals superficial basal cell carcinoma. Margins are clear.",
   "conclusionCode": [
     {
       "coding": [
         {
-          "system": "http://snomed.info/sct",
           "code": "1338007",
+          "system": "http://snomed.info/sct",
           "display": "Basal cell carcinoma (morphologic abnormality)"
         }
       ]
     }
-  ]
+  ],
+  "status": "final",
+  "subject": {
+    "reference": "Patient/patient-with-israeli-id",
+    "display": "תמר כהן"
+  },
+  "encounter": {
+    "reference": "Encounter/skin-biopsy",
+    "display": "Encounter with Dr. Smith"
+  },
+  "effectiveDateTime": "2024-11-05T14:30:00Z",
+  "issued": "2024-11-05T15:00:00Z",
+  "conclusion": "The skin biopsy reveals superficial basal cell carcinoma. Margins are clear."
 }

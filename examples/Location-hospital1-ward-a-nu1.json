@@ -1,0 +1,61 @@
+{
+  "resourceType": "Location",
+  "id": "hospital1-ward-a-nu1",
+  "meta": {
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "organization",
+        "display": "יחידה ארגונית"
+      }
+    ],
+    "profile": [
+      "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-location-nursing-unit"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Hospital1 Ward A - Nursing Unit 1</div>"
+  },
+  "identifier": [
+    {
+      "system": "http://hospital1.check.org/locations",
+      "value": "HOSP1-WARD-A-NU1",
+      "type": {
+        "coding": [
+          {
+            "code": "strong-id",
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+          }
+        ]
+      }
+    }
+  ],
+  "type": [
+    {
+      "coding": [
+        {
+          "system": "http://fhir.health.gov.il/cs/il-core-location-physical-type",
+          "code": "hospital-nursing-unit",
+          "display": "Hospital nursing unit"
+        },
+        {
+          "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+          "code": "HU",
+          "display": "Hospital unit"
+        }
+      ]
+    }
+  ],
+  "managingOrganization": {
+    "reference": "Organization/hospital1-ward-a"
+  },
+  "address": {
+    "line": [
+      "Rambam Hospital, Haifa"
+    ]
+  },
+  "status": "active",
+  "name": "Hospital1 Ward A Nursing Unit 1",
+  "mode": "instance"
+}

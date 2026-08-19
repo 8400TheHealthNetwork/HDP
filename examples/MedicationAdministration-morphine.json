@@ -1,6 +1,6 @@
 {
   "resourceType": "MedicationAdministration",
-  "id": "hdp-medication-administration-morphine",
+  "id": "morphine",
   "meta": {
     "profile": [
       "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-medication-administration"
@@ -45,10 +45,19 @@
     "start": "2022-10-05",
     "end": "2022-10-10"
   },
-"identifier": [
+  "identifier": [
     {
-      "system": "http://hospital.check.org/medication-administrations",
-      "value": "MA-2025-0001"
+      "id": "med-admin",
+      "value": "med-admin-001",
+      "system": "http://goodcare.org/meds/id",
+      "type": {
+        "coding": [
+          {
+            "code": "strong-id",
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+          }
+        ]
+      }
     }
   ],
   "performer": [

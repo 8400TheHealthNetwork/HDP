@@ -1,0 +1,49 @@
+{
+  "resourceType": "Organization",
+  "id": "hospital1-ward-b",
+  "meta": {
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "organization"
+      }
+    ],
+    "profile": [
+      "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-organization"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Hospital1 Internal Ward B</div>"
+  },
+  "identifier": [
+    {
+      "system": "http://fhir.health.gov.il/identifier/legal-entity",
+      "value": "514444444",
+      "use": "official",
+      "type": {
+        "coding": [
+          {
+            "code": "strong-id",
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+          }
+        ]
+      }
+    }
+  ],
+  "partOf": {
+    "reference": "Organization/hospital1"
+  },
+  "type": [
+    {
+      "coding": [
+        {
+          "code": "10000",
+          "system": "http://fhir.health.gov.il/cs/department-type-moh"
+        }
+      ]
+    }
+  ],
+  "active": true,
+  "name": "Hospital1 Internal Ward B"
+}

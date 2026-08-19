@@ -13,6 +13,7 @@ Usage: #example
 
 * identifier[+].system = "http://hospital1.check.org/observations"
 * identifier[=].value = "HOSP1-CC-ADM-2024-0001"
+* identifier[=].type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id
 
 * status = #final
 * code = $loinc#8661-1 "Chief complaint - Reported"

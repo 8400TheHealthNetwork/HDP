@@ -6,6 +6,7 @@ Description: "EpisodeOfCare profile for recurring day-hospitalization programs s
 
 * ^url = "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-episode-of-care-recurring-daily-hospitalization"
 * insert ConformanceMetadata
+* . obeys one-strong-identifier
 * ^status = #draft
 // meta already defined in ILHDPEpisodeOfCare
 * type 1..*

@@ -7,6 +7,7 @@ Usage: #example
 * identifier.id = "pathology-study"
 * identifier.value = "PATH-2024-0002"
 * identifier.system = "http://goodcare.org/reports/id"
+* identifier.type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id
 * status = #final
 * code = $loinc#11526-1 "Pathology study"
 * code.text = "Pathology study"

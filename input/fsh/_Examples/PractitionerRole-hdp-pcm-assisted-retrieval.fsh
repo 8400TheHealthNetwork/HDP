@@ -22,7 +22,7 @@ Usage: #example
 * active = true
 
 * identifier.use = #official
-* identifier.system = "https://hospital-a.example.org/fhir/sid/practitioner-role-id"
+* identifier.system = "https://hospital-a.check.org/fhir/sid/practitioner-role-id"
 * identifier.value = "PRAC-123456"
 * identifier.type.coding.system = "http://fhir.health.gov.il/cs/il-core-identifier-type"
 * identifier.type.coding.code = #strong-id

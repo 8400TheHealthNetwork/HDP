@@ -20,7 +20,15 @@
   "identifier": [
     {
       "system": "http://hospital.hospitalia.org/devices",
-      "value": "DEV-2025-0001"
+      "value": "DEV-2025-0001",
+      "type": {
+        "coding": [
+          {
+            "code": "strong-id",
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+          }
+        ]
+      }
     }
   ],
   "status": "active",

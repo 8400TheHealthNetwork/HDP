@@ -8,6 +8,7 @@ InstanceOf: ILHDPOrganization
 * meta.security[HDP].display = "יחידה ארגונית"
 * identifier[legal-entity].value = "500100904"
 * identifier.use = #official
+* identifier[legal-entity].type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id
 * active = true
 * name = "משרד הבריאות"
 

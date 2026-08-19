@@ -15,6 +15,7 @@ Description: "Demonstrates ILHDP Device Dispense profile with required meta, ide
 
 * identifier[0].system = "http://hospital.hospitalia.org/device-dispenses"
 * identifier[0].value = "DD-2025-0001"
+* identifier[0].type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id
 
 * meta.security[HDP].system = $info-buckets
 * meta.security[HDP].code = #medications

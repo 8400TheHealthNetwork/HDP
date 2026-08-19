@@ -6,6 +6,7 @@ Usage: #example
 * meta.security[HDP].display = "אבחנות"
 * identifier.value = "burned-ear"
 * identifier.system = "http://goodcare.org/conditions/id"
+* identifier.type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id
 
 // * type = #diagnosis
 * clinicalStatus = http://terminology.hl7.org/CodeSystem/condition-clinical#active "Active"

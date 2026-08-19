@@ -1,6 +1,6 @@
 {
   "resourceType": "DeviceRequest",
-  "id": "hdp-device-request-pump",
+  "id": "device-request-pump",
   "meta": {
     "security": [
       {
@@ -19,8 +19,16 @@
   },
   "identifier": [
     {
-      "system": "http://hospital.check.org/device-requests",
-      "value": "DR-2025-0001"
+      "system": "http://hospital.hospitalia.org/device-requests",
+      "value": "DR-2025-0001",
+      "type": {
+        "coding": [
+          {
+            "code": "strong-id",
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+          }
+        ]
+      }
     }
   ],
   "reasonReference": [
