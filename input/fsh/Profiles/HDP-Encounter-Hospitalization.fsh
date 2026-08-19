@@ -9,6 +9,7 @@ Description: "Top-level encounter in the HDP hierarchical hospitalization model.
 * ^status = #draft
 
 * insert ILHDPEncounterCommon
+* obeys ilhdp-enc-reason
 * obeys ilhdp-enc-period-start
 * obeys ilhdp-enc-finished-period
 

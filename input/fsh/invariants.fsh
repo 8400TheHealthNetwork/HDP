@@ -1,6 +1,6 @@
 Invariant: prac-ident-enc
-Description: "identifier must contain at least one member with either: 1.system = http://fhir.health.gov.il/identifier/encrypted-id-primary-moh; OR a value from PassportEncUri"
-Expression: "identifier.where(value.memberOf('http://fhir.health.gov.il/ValueSet/passport-enc-uri') or system='http://fhir.health.gov.il/identifier/encrypted-id-primary-moh').exists()"
+Description: "identifier must contain at least one member with either: 1.system = http://fhir.health.gov.il/identifier/encrypted-id-primary-moh; OR a system from PassportEncUri"
+Expression: "identifier.where(system.memberOf('http://fhir.health.gov.il/ValueSet/passport-enc-uri') or system='http://fhir.health.gov.il/identifier/encrypted-id-primary-moh').exists()"
 Severity: #error
 
 Invariant: prac-role-code-specialty 

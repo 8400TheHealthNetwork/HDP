@@ -14,4 +14,4 @@ Description: "Medication profile for HDP"
 * identifier 1..*
 * identifier.assigner only Reference(ILHDPOrganization or ILCoreOrganization)
 * manufacturer only Reference(ILHDPOrganization  or ILCoreOrganization)
-* ingredient.itemReference only Reference(ILCoreSubstance or ILHDPMedication or ILCoreMedication)
+* ingredient.itemReference only Reference(ILCoreSubstance or ILHDPSubstance or ILHDPMedication or ILCoreMedication)

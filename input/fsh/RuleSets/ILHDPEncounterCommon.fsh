@@ -1,10 +1,10 @@
 RuleSet: ILHDPEncounterCommon
 * meta only ILHDPMeta
+* meta 1..1
 * meta.security[HDP].system = $info-buckets (exactly)
 * meta.security[HDP].code = #encounterInformation (exactly)
 * meta.security[HDP].display = "ביקורים" (exactly)
 // * meta.security[HDP] = $info-buckets#encounterInformation "ביקורים" (exactly)
-* obeys ilhdp-enc-reason
 * obeys ilhdp-enc-face-to-face-exclusive
 
 * identifier 1..*

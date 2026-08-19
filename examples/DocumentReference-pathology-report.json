@@ -1,6 +1,6 @@
 {
   "resourceType": "DocumentReference",
-  "id": "document-reference-pathology-report",
+  "id": "pathology-report",
   "meta": {
     "security": [
       {
@@ -19,7 +19,7 @@
   },
   "identifier": [
     {
-      "system": "http://hospital.check.org/documents",
+      "system": "http://hospital.hospitliala.org/documents",
       "value": "DOCREF-2025-0001"
     }
   ],
@@ -34,9 +34,9 @@
   "type": {
     "coding": [
       {
-        "system": "http://hdp.fhir.health.gov.il/ValueSet/il-hdp-document-types",
-        "code": "pathology-report",
-        "display": "Pathology Report"
+        "system": "http://loinc.org",
+        "code": "102009-8",
+        "display": "Clinical pathology Laboratory report"
       }
     ]
   },
@@ -57,7 +57,7 @@
     {
       "attachment": {
         "contentType": "application/pdf",
-        "url": "http://hospital.check.org/fhir/Binary/12345",
+        "url": "http://hospital.hospitaliala.org/fhir/Binary/12345",
         "creation": "2025-09-10T15:00:00+02:00"
       }
     }

@@ -16,12 +16,12 @@ Description: "MedicationRequest profile for HDP"
 * subject only Reference(ILHDPPatient)
 * authoredOn 1..1
 * courseOfTherapyType 1..1
-* requester only Reference(ILHDPPatient or ILHDPPractitioner or ILHDPPractitionerRole or ILCoreRelatedPerson or ILHDPOrganization or ILCoreDevice or ILCorePractitioner or ILCorePractitionerRole or ILCoreOrganization or ILCoreRelatedPerson)
-* performer only Reference(ILHDPPractitioner or ILHDPPractitionerRole or ILHDPOrganization or ILHDPPatient or ILCoreRelatedPerson or ILHDPCareTeam or ILCoreDevice or ILCorePractitioner or ILCorePractitionerRole or ILCoreOrganization or ILCoreCareTeam)
+* requester only Reference(ILHDPPatient or ILHDPPractitioner or ILHDPPractitionerRole or ILCoreRelatedPerson or ILHDPRelatedPerson or ILHDPOrganization or ILCoreDevice or ILHDPDevice or ILCorePractitioner or ILCorePractitionerRole or ILCoreOrganization)
+* performer only Reference(ILHDPPractitioner or ILHDPPractitionerRole or ILHDPOrganization or ILHDPPatient or ILCoreRelatedPerson or ILHDPRelatedPerson or ILHDPCareTeam or ILCoreDevice or ILHDPDevice or ILCorePractitioner or ILCorePractitionerRole or ILCoreOrganization or ILCoreCareTeam)
 * recorder only Reference(ILHDPPractitioner or ILHDPPractitionerRole or ILCorePractitioner or ILCorePractitionerRole)
-* reasonReference only Reference(ILHDPCondition or ILCoreObservation)
-* basedOn only Reference(ILCoreCarePlan or ILHDPMedicationRequest or ILCoreServiceRequest or ILCoreImmunizationRecommendation or ILCoreMedicationRequest)
-* reportedReference only Reference(ILHDPPatient or ILHDPPractitioner or ILCorePractitioner or ILHDPPractitionerRole or ILCorePractitionerRole or ILCoreRelatedPerson or ILHDPOrganization or ILCoreOrganization)
+* reasonReference only Reference(ILHDPCondition or ILCoreCondition or ILCoreObservation or ILHDPObservation)
+* basedOn only Reference(ILCoreCarePlan or ILHDPMedicationRequest or ILCoreServiceRequest or ILHDPServiceRequest or ILCoreImmunizationRecommendation or ILCoreMedicationRequest)
+* reportedReference only Reference(ILHDPPatient or ILHDPPractitioner or ILCorePractitioner or ILHDPPractitionerRole or ILCorePractitionerRole or ILCoreRelatedPerson or ILHDPRelatedPerson or ILHDPOrganization or ILCoreOrganization)
 // * medicationReference only Reference(ILCoreMedication or ILHDPMedication)
 * medication[x] only CodeableConcept or Reference(ILCoreMedication or ILHDPMedication)
 * dosageInstruction 1..*

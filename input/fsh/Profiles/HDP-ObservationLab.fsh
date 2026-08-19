@@ -15,17 +15,17 @@ Description: "Observation Lab profile for HDP"
 * subject 1..1
 * subject.identifier 1..1
 * subject only Reference(ILHDPPatient) 
-* basedOn only Reference(ILCoreCarePlan or ILCoreDeviceRequest or ILHDPMedicationRequest or ILCoreImmunizationRecommendation or ILHDPMedicationRequest or ILCoreNutritionOrder or ILCoreServiceRequest or ILCoreMedicationRequest)
+* basedOn only Reference(ILCoreCarePlan or ILCoreDeviceRequest or ILHDPDeviceRequest or ILHDPMedicationRequest or ILCoreImmunizationRecommendation or ILCoreNutritionOrder or ILCoreServiceRequest or ILHDPServiceRequest or ILCoreMedicationRequest)
 * basedOn.identifier 1..1
 // * performer only Reference(ILHDPPractitioner or ILHDPPractitionerRole or ILHDPOrganization or ILHDPCareTeam or ILHDPPatient or ILCoreRelatedPerson or ILCorePractitioner or ILCorePractitionerRole or ILCoreOrganization or ILCoreCareTeam)
 // * performer only Reference(ILHDPPractitioner or ILCorePractitioner or ILHDPOrganization or ILCoreOrganization)
 * encounter only Reference(ILCoreEncounter)
-* partOf only Reference(ILHDPMedicationAdministration or ILHDPMedicationStatement or ILHDPMedicationDispense or ILCoreImmunization or ILCoreImagingStudy or ILCoreMedicationStatement)
-* hasMember only Reference(ILCoreObservation or ILCoreQuestionnaireResponse or MolecularSequence)
-* derivedFrom only Reference(ILHDPDocumentReference or ILCoreDocumentReference or ILCoreImagingStudy or ILCoreMedia or ILCoreQuestionnaireResponse or ILHDPObservationLab or ILCoreMolecularSequence)
+* partOf only Reference(ILCoreMedicationAdministration or ILHDPMedicationAdministration or ILCoreMedicationStatement or ILHDPMedicationStatement or ILCoreMedicationDispense or ILHDPMedicationDispense or ILCoreImmunization or ILCoreImagingStudy)
+* hasMember only Reference(ILCoreObservation or ILHDPObservation or ILCoreQuestionnaireResponse or MolecularSequence)
+* derivedFrom only Reference(ILHDPDocumentReference or ILCoreDocumentReference or ILCoreImagingStudy or ILCoreMedia or ILCoreQuestionnaireResponse or ILCoreObservationLab or ILHDPObservationLab or ILCoreMolecularSequence)
 * specimen 1..1
 * specimen only Reference(ILHDPSpecimenLab)
-* device only Reference(ILCoreDevice or DeviceMetric)
+* device only Reference(ILCoreDevice or ILHDPDevice or DeviceMetric)
 * code 1..1
 * effectiveDateTime 1..1
 * value[x] 0..1

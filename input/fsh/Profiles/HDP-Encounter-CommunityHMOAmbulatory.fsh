@@ -9,6 +9,7 @@ Description: "Encounter for care delivered in the community/HMO setting or for h
 * ^status = #draft
 
 * insert ILHDPEncounterCommon
+* obeys ilhdp-enc-reason
 * obeys ilhdp-enc-ambulatory-period
 * obeys ilhdp-community-virtual-class
 

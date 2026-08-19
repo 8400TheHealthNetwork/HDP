@@ -5,7 +5,7 @@ Description: "Short segment representing a PICC line insertion procedure during 
 Usage: #example
 
 * text.status = #generated
-* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Segment:</b> PICC line insertion during inpatient care.</p><p>Linked as a child event to the Ward A segment.</p><p>A Procedure resource for the PICC insertion can be linked via reasonReference when available.</p></div>"
+* text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Segment:</b> PICC line insertion during inpatient care.</p><p>Linked as a child event to the Ward A segment.</p><p>The need for prolonged parenteral nutrition is recorded as the reason for the segment. A Procedure resource for the PICC insertion should reference this segment through Procedure.encounter when available.</p></div>"
 
 * meta.security[HDP].system = $info-buckets
 * meta.security[HDP].code = #encounterInformation
@@ -62,5 +62,4 @@ Usage: #example
 * location[=].physicalType.coding[=].code = #hospital-nursing-unit
 * location[=].physicalType.coding[=].display = "Hospital nursing unit"
 
-* reasonCode[+].coding[+] = $sct#425196008 "Insertion of peripherally inserted central catheter (procedure)"
-* reasonCode[=].text = "PICC line insertion procedure"
+* reasonCode[+].text = "Need for prolonged parenteral nutrition"

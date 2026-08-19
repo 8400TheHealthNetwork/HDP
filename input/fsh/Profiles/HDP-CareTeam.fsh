@@ -12,7 +12,7 @@ Description: "CareTeam profile for HDP"
 * meta.security[HDP].display = "מטפל" (exactly)
 * identifier 1..*
 * subject only Reference(ILHDPPatient)
-* participant.member only Reference(ILCorePractitioner or ILCorePractitionerRole or ILCoreOrganization or ILHDPPatient or ILCoreRelatedPerson or ILCoreCareTeam or 
+* participant.member only Reference(ILCorePractitioner or ILCorePractitionerRole or ILCoreOrganization or ILHDPPatient or ILCoreRelatedPerson or ILHDPRelatedPerson or ILCoreCareTeam or
                         ILHDPPractitioner or ILHDPPractitionerRole or ILHDPOrganization or ILHDPCareTeam)
 * reasonReference only Reference(ILCoreCondition or ILHDPCondition)
 * managingOrganization only Reference(ILCoreOrganization or ILHDPOrganization)
