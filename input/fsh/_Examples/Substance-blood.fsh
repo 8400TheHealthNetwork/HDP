@@ -16,6 +16,7 @@ Description: "Demonstrates ILHDP Substance profile"
 
 * identifier[0].system = "http://hospital.exsystem.org/substances"
 * identifier[0].value = "SUB-2025-0002"
+* identifier[0].type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id
 
 * status = #active
 * code.coding[0].system = $sct

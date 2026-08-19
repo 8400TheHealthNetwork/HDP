@@ -22,6 +22,7 @@ Usage: #example
 * address.country = "IL"
 * identifier.system = "http://rambam.co.il/department"
 * identifier.value = "010011"
+* identifier.type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id
 * status = #active
 * name = "פנימית א' בית חולים רמב\"ם"
 * type = http://terminology.hl7.org/CodeSystem/v3-RoleCode#HU

@@ -44,3 +44,4 @@ Description: "Example of a medication statement conforming to the HDP profile"
 * dosage.doseAndRate.rateRatio.denominator.unit = "hour"
 * dosage.timing.repeat.when = #MORN
 * identifier.value = "med-statement-001"
+* identifier.type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id

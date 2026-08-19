@@ -53,3 +53,4 @@ Usage: #example
 * collection.bodySite = $sct#368208006 "Left arm"
 * identifier.value = "serum-specimen-from-patient-001"
 * identifier.system = "http://specimen-ids.net/specimen-ids"  // this is an example
+* identifier.type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id

@@ -12,6 +12,7 @@ Usage: #example
 
 * identifier[+].system = "http://hospital1.check.org/observations"
 * identifier[=].value = "HOSP1-VS-BP-2024-0001"
+* identifier[=].type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id
 
 * extension[+].url = $ext-resource-role-context
 * extension[=].extension[+].url = "role"

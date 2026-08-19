@@ -1,0 +1,46 @@
+{
+  "resourceType": "Organization",
+  "id": "HMO1",
+  "meta": {
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "organization"
+      }
+    ],
+    "profile": [
+      "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-organization"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">HMO1</div>"
+  },
+  "identifier": [
+    {
+      "system": "http://fhir.health.gov.il/identifier/legal-entity",
+      "value": "515555555",
+      "use": "official",
+      "type": {
+        "coding": [
+          {
+            "code": "strong-id",
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+          }
+        ]
+      }
+    }
+  ],
+  "type": [
+    {
+      "coding": [
+        {
+          "code": "73",
+          "system": "http://fhir.health.gov.il/cs/institution-type-moh"
+        }
+      ]
+    }
+  ],
+  "active": true,
+  "name": "HMO1"
+}

@@ -1,0 +1,46 @@
+{
+  "resourceType": "Location",
+  "id": "hospital1-main-campus",
+  "meta": {
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "organization",
+        "display": "יחידה ארגונית"
+      }
+    ],
+    "profile": [
+      "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-location"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Hospital1 Main Campus</div>"
+  },
+  "identifier": [
+    {
+      "system": "http://hospital1.check.org/locations",
+      "value": "HOSP1-MAIN-CAMPUS",
+      "type": {
+        "coding": [
+          {
+            "code": "strong-id",
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+          }
+        ]
+      }
+    }
+  ],
+  "managingOrganization": {
+    "reference": "Organization/hospital1",
+    "display": "Hospital1"
+  },
+  "address": {
+    "line": [
+      "Rambam Hospital, Haifa"
+    ]
+  },
+  "status": "active",
+  "name": "Hospital1 Main Campus",
+  "mode": "instance"
+}

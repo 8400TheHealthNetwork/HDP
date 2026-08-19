@@ -16,6 +16,7 @@ Description: "Demonstrates ILHDP DeviceUseStatement profile with meta, identifie
 
 * identifier[0].system = "http://hospital.hospitalia.org/deviceusestatement"
 * identifier[0].value = "DEVUSE-2025-0001"
+* identifier[0].type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id
 
 * status = #active
 * subject = Reference(Patient/example)

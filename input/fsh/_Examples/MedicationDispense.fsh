@@ -11,6 +11,7 @@ Description: "Example of a medication dispense conforming to the HDP profile"
 * extension[recorded].valueDateTime = "2024-05-21T14:00:00Z"
 * identifier.value = "dispense-001"
 * identifier.system = "http://goodcare.org/dispenses/id"
+* identifier.type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id
 
 * status = #completed
 * category.coding = http://fhir.health.gov.il/cs/il-core-medication-request-category#community-hmo "Community Care/HMO"

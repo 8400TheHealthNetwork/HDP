@@ -1,6 +1,6 @@
 {
   "resourceType": "DocumentReference",
-  "id": "pathology-report",
+  "id": "document-reference-pathology-report",
   "meta": {
     "security": [
       {
@@ -20,7 +20,15 @@
   "identifier": [
     {
       "system": "http://hospital.hospitliala.org/documents",
-      "value": "DOCREF-2025-0001"
+      "value": "DOCREF-2025-0001",
+      "type": {
+        "coding": [
+          {
+            "code": "strong-id",
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+          }
+        ]
+      }
     }
   ],
   "author": [

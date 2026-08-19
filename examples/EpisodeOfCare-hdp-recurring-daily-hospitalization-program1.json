@@ -20,7 +20,15 @@
   "identifier": [
     {
       "system": "http://hospital1.check.org/episodes",
-      "value": "HOSP1-RDH-2024-0001"
+      "value": "HOSP1-RDH-2024-0001",
+      "type": {
+        "coding": [
+          {
+            "code": "strong-id",
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+          }
+        ]
+      }
     }
   ],
   "statusHistory": [
@@ -52,15 +60,9 @@
     {
       "coding": [
         {
-          "system": "http://fhir.health.gov.il/cs/il-core-service-type",
-          "_code": {
-            "extension": [
-              {
-                "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-                "valueCode": "unknown"
-              }
-            ]
-          }
+          "code": "310129007",
+          "system": "http://snomed.info/sct",
+          "display": "Rehabilitation service"
         }
       ]
     }

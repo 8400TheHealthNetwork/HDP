@@ -1,0 +1,68 @@
+{
+  "resourceType": "PractitionerRole",
+  "id": "practitioner-role-assisted-hosp-a",
+  "meta": {
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "practitioner",
+        "display": "מטפל"
+      }
+    ],
+    "profile": [
+      "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-pcm-assisted-practitioner-role"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>Assisted-consent practitioner role used for OTP-based practitioner authentication.</p><p>FHIR REST: <code>GET https://pcm.fhir.health.gov.il/r4/PractitionerRole?identifier=PRAC-123456&amp;role=http://fhir.health.gov.il/cs/il-core-practitioner-role|consent-assistant&amp;active=true</code></p></div>"
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type",
+            "code": "strong-id"
+          }
+        ]
+      },
+      "use": "official",
+      "system": "https://hospital-a.check.org/fhir/sid/practitioner-role-id",
+      "value": "PRAC-123456"
+    }
+  ],
+  "code": [
+    {
+      "coding": [
+        {
+          "system": "http://fhir.health.gov.il/cs/il-core-practitioner-role",
+          "code": "consent-assistant"
+        }
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "extension": [
+        {
+          "valueCodeableConcept": {
+            "coding": [
+              {
+                "system": "http://fhir.health.gov.il/cs/il-core-contact-point-purpose",
+                "code": "OTP"
+              }
+            ]
+          },
+          "url": "http://hl7.org/fhir/StructureDefinition/contactpoint-purpose"
+        }
+      ],
+      "system": "sms",
+      "value": "+972-50-7000001"
+    }
+  ],
+  "active": true,
+  "organization": {
+    "reference": "Organization/hospital1"
+  }
+}

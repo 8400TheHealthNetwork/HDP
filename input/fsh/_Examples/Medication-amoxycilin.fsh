@@ -17,6 +17,7 @@ Description: "Demonstrates ILHDP Medication profile with meta, identifiers, code
 
 * identifier[0].system = "http://hospital.hospitalia.org/medications"
 * identifier[0].value = "MED-2025-0001"
+* identifier[0].type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id
 * identifier[0].assigner = Reference(Organization/example)
 
 * code.coding[0].system = $sct

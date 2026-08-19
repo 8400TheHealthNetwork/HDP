@@ -15,8 +15,16 @@
   },
   "identifier": [
     {
-      "system": "http://hospital.check.org/service-requests",
-      "value": "SR12345"
+      "value": "SR12345",
+      "system": "http://goodcare.org/service-req/id",
+      "type": {
+        "coding": [
+          {
+            "code": "strong-id",
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+          }
+        ]
+      }
     }
   ],
   "category": [
@@ -45,7 +53,6 @@
     {
       "coding": [
         {
-          "version": "http://snomed.info/sct/",
           "code": "386663009",
           "system": "http://snomed.info/sct",
           "display": "Bicycle accident (event)"

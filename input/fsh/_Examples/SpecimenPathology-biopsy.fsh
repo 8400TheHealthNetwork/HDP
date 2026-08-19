@@ -5,6 +5,7 @@ Usage: #example
 * meta.profile = "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-specimen-pathology"
 * identifier.system = "http://specimen-ids.net/specimen-ids"  // this is an example
 * identifier.value = "12345-biopsy-001"
+* identifier.type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id
 * status = #available
 * type = $sct#309506005 "Skin excision biopsy specimen (specimen)"
 * type.text = "Skin excision biopsy specimen (specimen)"

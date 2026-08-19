@@ -19,8 +19,16 @@
   },
   "identifier": [
     {
-      "system": "http://hospital.check.org/substances",
-      "value": "SUB-2025-0002"
+      "system": "http://hospital.exsystem.org/substances",
+      "value": "SUB-2025-0002",
+      "type": {
+        "coding": [
+          {
+            "code": "strong-id",
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+          }
+        ]
+      }
     }
   ],
   "code": {

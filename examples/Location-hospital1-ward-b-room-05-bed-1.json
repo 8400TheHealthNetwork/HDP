@@ -1,0 +1,44 @@
+{
+  "resourceType": "Location",
+  "id": "hospital1-ward-b-room-05-bed-1",
+  "meta": {
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "organization"
+      }
+    ],
+    "profile": [
+      "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-location"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Hospital1 Ward B - Room 05 Bed 1</div>"
+  },
+  "identifier": [
+    {
+      "system": "http://hospital1.check.org/locations",
+      "value": "HOSP1-WARD-B-R05-B1",
+      "type": {
+        "coding": [
+          {
+            "code": "strong-id",
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+          }
+        ]
+      }
+    }
+  ],
+  "managingOrganization": {
+    "reference": "Organization/hospital1-ward-b"
+  },
+  "address": {
+    "line": [
+      "Rambam Hospital, Haifa"
+    ]
+  },
+  "status": "active",
+  "name": "Ward B Room 05 Bed 1",
+  "mode": "instance"
+}

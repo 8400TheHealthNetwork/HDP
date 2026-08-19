@@ -1,4 +1,4 @@
-Instance: pathology-report
+Instance: document-reference-pathology-report
 InstanceOf: ILHDPDocumentReference
 Title: "Example ILHDP DocumentReference Pathology Report"
 Description: "Demonstrates ILHDP DocumentReference profile with required meta, identifiers, subject, author, type, date, content, and constraints"
@@ -16,6 +16,7 @@ Description: "Demonstrates ILHDP DocumentReference profile with required meta, i
 
 * identifier[0].system = "http://hospital.hospitliala.org/documents"
 * identifier[0].value = "DOCREF-2025-0001"
+* identifier[0].type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id
 
 * status = #current
 * subject = Reference(Patient/example)
@@ -26,7 +27,7 @@ Description: "Demonstrates ILHDP DocumentReference profile with required meta, i
 * authenticator = Reference(Practitioner/example)
 
 * type.coding[0].system = $loinc
-* type.coding[0].code = #102009-8 
+* type.coding[0].code = #102009-8
 * type.coding[0].display = "Clinical pathology Laboratory report"
 
 * date = "2025-09-10T15:30:00+02:00"

@@ -20,6 +20,7 @@ Description: "Demonstrates ILHDP Device profile with required meta, identifiers,
 
 * identifier[0].system = "http://hospital.hospitalia.org/devices"
 * identifier[0].value = "DEV-2025-0001"
+* identifier[0].type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id
 
 * meta.security[HDP].system = $info-buckets
 * meta.security[HDP].code = #medications

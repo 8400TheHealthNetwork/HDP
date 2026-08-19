@@ -12,6 +12,7 @@ Usage: #example
 
 * identifier[+].system = "http://hospital1.check.org/encounters"
 * identifier[=].value = "HOSP1-WARDA-ADM-2024-0001"
+* identifier[=].type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id
 
 * status = #finished
 * class = $v3-ActCode#IMP "inpatient encounter"

@@ -21,7 +21,15 @@
     {
       "system": "http://fhir.health.gov.il/identifier/legal-entity",
       "value": "500100904",
-      "use": "official"
+      "use": "official",
+      "type": {
+        "coding": [
+          {
+            "code": "strong-id",
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+          }
+        ]
+      }
     }
   ],
   "telecom": [

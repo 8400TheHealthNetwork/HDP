@@ -1,28 +1,35 @@
 {
   "resourceType": "MedicationRequest",
-  "id": "hdp-metamizole-for-gangreenous-tonsolitis",
+  "id": "metamizole",
   "meta": {
-      "security":  [
-          {
-              "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
-              "code": "medications",
-              "display": "תרופות"
-          }
-      ],
-      "profile":  [
-          "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-medication-request"
-      ]
+    "profile": [
+      "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-medication-request"
+    ],
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "medications",
+        "display": "תרופות"
+      }
+    ]
   },
   "text": {
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A request by a GP in an HMO setting for 10 drops of oral Optalgin (Metamizole) up to 3 times a day for the duration of two weeks due to a diagnosis of acute gangrenous tonsillitis.</div>",
-    "status": "generated"
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">A request by a GP in an HMO setting for 10 drops of oral Optalgin (Metamizole) up to 3 times a day for the duration of two weeks due to a diagnosis of acute gangrenous tonsillitis.</div>"
   },
-  "status": "completed",
-  "intent": "order",
-    "identifier": [
+  "identifier": [
     {
-      "system": "http://hospital.check.org/medication-requests",
-      "value": "MR-2025-0001"
+      "id": "medication-request-metamizole",
+      "system": "http://goodcare.org/med-req/id",
+      "value": "med-request-001",
+      "type": {
+        "coding": [
+          {
+            "code": "strong-id",
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+          }
+        ]
+      }
     }
   ],
   "category": [
@@ -45,31 +52,11 @@
       }
     ]
   },
-  "subject": {
-    "reference": "Patient/patient-immigrant",
-    "type": "Patient",
-    "display": "Ben Binyamini"
-  },
-  "encounter": {
-    "reference": "Encounter/community-consultation",
-    "type": "Encounter",
-    "display": "GP HMO visit"
-  },
-  "authoredOn": "2022-12-10",
-  "requester": {
-    "reference": "Practitioner/practitioner-md",
-    "type": "Practitioner",
-    "display": "Dr. Moshe Ben Haim"
-  },
   "supportingInformation": [
     {
-      "type": "Observation",
       "reference": "Observation/hight-measurement"
     }
   ],
-  "recorder": {
-    "reference": "Practitioner/practitioner-md"
-  },
   "reasonCode": [
     {
       "coding": [
@@ -84,15 +71,14 @@
   "courseOfTherapyType": {
     "coding": [
       {
-        "code": "acute",
         "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+        "code": "acute",
         "display": "Short course (acute) therapy"
       }
     ]
   },
   "dosageInstruction": [
     {
-      "text": "10 טיפות כל 8 שעות עד 3 פעמים בבליעה דרך הפה",
       "route": {
         "coding": [
           {
@@ -112,13 +98,13 @@
         ]
       },
       "site": {
-      "extension": [
-        {
-          "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
-          "valueCode": "unknown"
-        }
-      ]
-    },
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+            "valueCode": "unknown"
+          }
+        ]
+      },
       "doseAndRate": [
         {
           "doseQuantity": {
@@ -137,10 +123,26 @@
             }
           }
         }
-      ]
+      ],
+      "text": "10 טיפות כל 8 שעות עד 3 פעמים בבליעה דרך הפה"
     }
   ],
   "substitution": {
     "allowedBoolean": true
+  },
+  "status": "completed",
+  "intent": "order",
+  "subject": {
+    "reference": "Patient/patient-immigrant"
+  },
+  "encounter": {
+    "reference": "Encounter/community-consultation"
+  },
+  "authoredOn": "2022-12-10",
+  "requester": {
+    "reference": "Practitioner/practitioner-md"
+  },
+  "recorder": {
+    "reference": "Practitioner/practitioner-md"
   }
 }

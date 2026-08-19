@@ -19,10 +19,18 @@
       "valueDateTime": "2024-05-21T14:00:00Z"
     }
   ],
-    "identifier": [
+  "identifier": [
     {
-      "system": "http://hospital.check.org/medication-dispenses",
-      "value": "MD-2025-0002"
+      "value": "dispense-001",
+      "system": "http://goodcare.org/dispenses/id",
+      "type": {
+        "coding": [
+          {
+            "code": "strong-id",
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+          }
+        ]
+      }
     }
   ],
   "category": {
