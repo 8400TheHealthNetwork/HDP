@@ -12,6 +12,16 @@ Description: "Indicates whether the patient is currently pregnant, as supporting
 * ^context[2].expression = "DeviceRequest"
 * ^context[3].type = #element
 * ^context[3].expression = "Appointment"
+* ^context[4].type = #element
+* ^context[4].expression = "Encounter"
+* ^context[5].type = #element
+* ^context[5].expression = "Procedure"
+* ^context[6].type = #element
+* ^context[6].expression = "Condition"
+* ^context[7].type = #element
+* ^context[7].expression = "DiagnosticReport"
+* ^context[8].type = #element
+* ^context[8].expression = "ImagingStudy"
 * value[x] 1..1
 * value[x] only boolean
 * insert ConformanceMetadata
