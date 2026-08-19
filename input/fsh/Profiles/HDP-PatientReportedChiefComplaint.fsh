@@ -6,6 +6,7 @@ Description: "HDP constraints for patient-reported chief complaint observation w
 
 * ^url = "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-patient-reported-chief-complaint"
 * insert ConformanceMetadata
+* . obeys one-strong-identifier
 * ^status = #draft
 
 * meta only ILHDPMeta

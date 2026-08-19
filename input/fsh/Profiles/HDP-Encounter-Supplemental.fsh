@@ -6,6 +6,7 @@ Description: "Supplemental encounter profile for optional additional encounter c
 
 * ^url = "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-encounter-supplemental"
 * insert ConformanceMetadata
+* . obeys one-strong-identifier
 * ^status = #draft
 
 * meta only ILHDPMeta

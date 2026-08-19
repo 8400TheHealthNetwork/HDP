@@ -6,6 +6,7 @@ Description: "Encounter for care delivered in the community/HMO setting or for h
 
 * ^url = "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-encounter-community-hmo-ambulatory"
 * insert ConformanceMetadata
+* . obeys one-strong-identifier
 * ^status = #draft
 
 * insert ILHDPEncounterCommon
