@@ -1,6 +1,6 @@
 {
   "resourceType": "DocumentReference",
-  "id": "document-reference-pathology-report",
+  "id": "pathology-report",
   "meta": {
     "security": [
       {
