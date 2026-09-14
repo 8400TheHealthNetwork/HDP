@@ -26,7 +26,7 @@ Description: "MedicationRequest profile for HDP"
 * medication[x] only CodeableConcept or Reference(ILCoreMedication or ILHDPMedication)
 * dosageInstruction 1..*
 * dosageInstruction.text 1..1
-* dosageInstruction.doseAndRate 1..*
+* dosageInstruction.doseAndRate 0..*
 * dosageInstruction.doseAndRate obeys medication-dose-rate-1
 * dosageInstruction.doseAndRate.dose[x] 0..1
 * dosageInstruction.doseAndRate.rate[x] 0..1
