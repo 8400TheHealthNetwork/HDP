@@ -24,7 +24,7 @@ Description: "MedicationDispense profile for HDP"
 * dosageInstruction 1..*
 // * dosageInstruction only ILHDPDosage
 * dosageInstruction.text 0..1
-* dosageInstruction.doseAndRate 1..*
+* dosageInstruction.doseAndRate 0..*
 * dosageInstruction.doseAndRate obeys medication-dose-rate-1
 * dosageInstruction.doseAndRate.dose[x] 0..1
 * dosageInstruction.doseAndRate.rate[x] 0..1
