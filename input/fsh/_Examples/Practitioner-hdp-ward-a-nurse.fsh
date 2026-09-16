@@ -14,6 +14,8 @@ Usage: #example
 
 * identifier[+].system = $nurse-license-moh
 * identifier[=].value = "11111"
+* identifier[+].system = "http://fhir.health.gov.il/identifier/encrypted-id-primary-moh"
+* identifier[=].value = "tR56$@8vb"
 
 * active = true
 * name[English].family = "Katz"

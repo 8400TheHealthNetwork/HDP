@@ -1,7 +1,7 @@
 Instance: blood-glucose
-InstanceOf: ILHDPObservation
+InstanceOf: ILHDPObservationLab
 Title: "Example ILHDP Observation Blood Glucose"
-Description: "Demonstrates ILHDP Observation profile with meta, identifiers, subject, encounter, performer, specimen, and device"
+Description: "Demonstrates ILHDP ObservationLab profile with meta, identifiers, subject, encounter, performer, specimen, and device"
 
 * text.status = #generated
 * text.div = """
@@ -21,12 +21,17 @@ Description: "Demonstrates ILHDP Observation profile with meta, identifiers, sub
 * category[0].coding[0].system = $obs-cat
 * category[0].coding[0].code = #laboratory
 * category[0].coding[0].display = "Laboratory"
+* category[il-core].coding[0].system = $sct
+* category[il-core].coding[0].code = #108252007
+* category[il-core].coding[0].display = "Laboratory procedure"
 
 * code.coding[0].system = $loinc
 * code.coding[0].code = #2339-0
 * code.coding[0].display = "Glucose [Mass/volume] in Blood"
 
-* subject = Reference(Patient/example)
+* subject.identifier.system = "http://fhir.health.gov.il/identifier/il-national-id"
+* subject.identifier.value = "000000018"
+* subject.reference = "Patient/example"
 * encounter = Reference(Encounter/example)
 
 * effectiveDateTime = "2025-09-10T09:30:00+02:00"
@@ -43,3 +48,13 @@ Description: "Demonstrates ILHDP Observation profile with meta, identifiers, sub
 * valueQuantity.unit = "mg/dL"
 * valueQuantity.system = $ucum
 * valueQuantity.code = #mg/dL
+
+* referenceRange[0].low.value = 70
+* referenceRange[0].low.unit = "mg/dL"
+* referenceRange[0].low.system = $ucum
+* referenceRange[0].low.code = #mg/dL
+* referenceRange[0].high.value = 100
+* referenceRange[0].high.unit = "mg/dL"
+* referenceRange[0].high.system = $ucum
+* referenceRange[0].high.code = #mg/dL
+

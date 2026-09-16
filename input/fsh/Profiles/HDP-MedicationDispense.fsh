@@ -14,17 +14,18 @@ Description: "MedicationDispense profile for HDP"
 // * subject 1..1
 * identifier 1..*
 * subject only Reference(ILHDPPatient)
-* performer.actor only Reference(ILCorePractitioner or ILCorePractitionerRole or ILCoreOrganization or ILHDPOrganization or ILCoreDevice or ILCoreRelatedPerson or 
-                    ILHDPPractitioner or ILHDPPractitionerRole or ILHDPPatient or ILHDPPractitioner or ILHDPPractitionerRole or  ILHDPPatient or  ILHDPOrganization)
+* performer.actor only Reference(ILCorePractitioner or ILCorePractitionerRole or ILCoreOrganization or ILHDPOrganization or ILCoreDevice or ILHDPDevice or ILCoreRelatedPerson or ILHDPRelatedPerson or
+                    ILHDPPractitioner or ILHDPPractitionerRole or ILHDPPatient)
 * location only Reference(ILCoreLocation or ILHDPLocation)
 * authorizingPrescription only Reference(ILCoreMedicationRequest or ILHDPMedicationRequest)
 * destination only Reference(ILCoreLocation or ILHDPLocation)
 * receiver only Reference(ILCorePractitioner or ILHDPPractitioner or ILHDPPatient)
 * substitution.responsibleParty only Reference(ILCorePractitioner or ILCorePractitionerRole or ILHDPPractitioner or ILHDPPractitionerRole)
 * dosageInstruction 1..*
+* dosageInstruction obeys il-dosage-dose-required-when-no-substeps
 // * dosageInstruction only ILHDPDosage
 * dosageInstruction.text 0..1
-* dosageInstruction.doseAndRate 1..*
+* dosageInstruction.doseAndRate 0..*
 * dosageInstruction.doseAndRate obeys medication-dose-rate-1
 * dosageInstruction.doseAndRate.dose[x] 0..1
 * dosageInstruction.doseAndRate.rate[x] 0..1

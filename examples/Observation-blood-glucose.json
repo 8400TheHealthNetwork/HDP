@@ -32,6 +32,31 @@
           "display": "Laboratory"
         }
       ]
+    },
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "108252007",
+          "display": "Laboratory procedure"
+        }
+      ]
+    }
+  ],
+  "referenceRange": [
+    {
+      "low": {
+        "value": 70,
+        "code": "mg/dL",
+        "system": "http://unitsofmeasure.org",
+        "unit": "mg/dL"
+      },
+      "high": {
+        "value": 100,
+        "code": "mg/dL",
+        "system": "http://unitsofmeasure.org",
+        "unit": "mg/dL"
+      }
     }
   ],
   "code": {
@@ -59,6 +84,10 @@
   },
   "status": "final",
   "subject": {
+    "identifier": {
+      "system": "http://fhir.health.gov.il/identifier/il-national-id",
+      "value": "000000018"
+    },
     "reference": "Patient/example"
   },
   "encounter": {
