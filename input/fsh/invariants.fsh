@@ -24,8 +24,8 @@ Expression: "verificationStatus.exists() and clinicalStatus.exists()"
 Severity: #warning
 
 Invariant: ilhdp-allergy-category-required
-Description: "category must be present unless code.coding contains SNOMED CT 716186003 (No known allergy), or code.text is present with no code.coding.code values."
-Expression: "category.exists() or code.coding.where(system = 'http://snomed.info/sct' and code = '716186003').exists() or (code.text.exists() and code.coding.code.count() = 0)"
+Description: "category must be present unless code.coding contains SNOMED CT 716186003 (No known allergy), or code.text is present with no code.coding entries."
+Expression: "category.exists() or code.coding.where(system = 'http://snomed.info/sct' and code = '716186003').exists() or (code.text.exists() and code.coding.empty())"
 Severity: #error
 
 Invariant: obs-lab-value-absent

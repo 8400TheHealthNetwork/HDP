@@ -14,7 +14,6 @@ Description: "Exercises ilhdp-allergy-category-required clause B: code.coding co
 
 * clinicalStatus = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical#active
 * verificationStatus = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification#confirmed
-* type = #allergy
 
 * code.coding.system = $sct
 * code.coding.code = #716186003
