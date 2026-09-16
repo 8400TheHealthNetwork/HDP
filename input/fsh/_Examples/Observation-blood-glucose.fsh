@@ -18,9 +18,12 @@ Description: "Demonstrates ILHDP ObservationLab profile with meta, identifiers, 
 * identifier[0].type = http://fhir.health.gov.il/cs/il-core-identifier-type#strong-id
 
 * status = #final
-* category[il-core].coding.system = "http://snomed.info/sct"
-* category[il-core].coding.code = #108252007
-* category[il-core].coding.display = "Laboratory procedure"
+* category[0].coding[0].system = $obs-cat
+* category[0].coding[0].code = #laboratory
+* category[0].coding[0].display = "Laboratory"
+* category[il-core].coding[0].system = $sct
+* category[il-core].coding[0].code = #108252007
+* category[il-core].coding[0].display = "Laboratory procedure"
 
 * code.coding[0].system = $loinc
 * code.coding[0].code = #2339-0
@@ -47,4 +50,4 @@ Description: "Demonstrates ILHDP ObservationLab profile with meta, identifiers, 
 * valueQuantity.code = #mg/dL
 
 * referenceRange.low = 70 'mg/dL' "mg/dL"
-* referenceRange.high = 140 'mg/dL' "mg/dL"
+* referenceRange.high = 100 'mg/dL' "mg/dL"
