@@ -9,8 +9,8 @@ Expression: "code.exists() or specialty.exists()"
 Severity: #error
 
 Invariant: effective-start-end
-Description: "effectivePeriod.start and effectivePeriod.end SHALL have a value if extension:courseOfTherapyType is 'continuous' and status is 'stopped'"
-Expression: "status = 'stopped' and extension('http://fhir.health.gov.il/StructureDefinition/ext-medication-course-of-therapy-type').value.ofType(CodeableConcept).coding.where(system = 'http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy' and code = 'continuous').exists() implies (effectivePeriod.start.exists() and effectivePeriod.end.exists())"
+Description: "effectivePeriod.start and effectivePeriod.end SHALL have a value if extension:courseOfTherapyType is 'chronic' and status is 'stopped'"
+Expression: "status = 'stopped' and extension('http://fhir.health.gov.il/cs/il-core-medication-course-of-therapy-type').value.ofType(CodeableConcept).coding.where(system = 'http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy' and code = 'continuous').exists() implies (effectivePeriod.start.exists() and effectivePeriod.end.exists())"
 Severity: #warning
 
 Invariant: check-identifiers
