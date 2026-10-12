@@ -12,6 +12,7 @@ Alias: $ILHDPRelatedPerson =            http://hdp.fhir.health.gov.il/StructureD
 Alias: $ILHDPLocationNursingUnit =      http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-location-nursing-unit
 Alias: $ILHDPPatientReportedChiefComplaint = http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-patient-reported-chief-complaint
 Alias: $ILHDPServiceRequestReferral =   http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-service-request-referral
+Alias: $ILHDPRelatedPersonContained =   http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-related-person-contained
 
 
 Alias: $effective =    http://hl7.org/fhir/StructureDefinition/codesystem-effectiveDate
@@ -44,6 +45,7 @@ Alias: $vs-il-hdp-service-request-referral-intent = http://hdp.fhir.health.gov.i
 Alias: $vs-il-hdp-smoking-status =                   http://hdp.fhir.health.gov.il/ValueSet/il-hdp-smoking-status
 Alias: $vs-il-core-diagnosis-role                    = http://fhir.health.gov.il/ValueSet/il-core-diagnosis-role
 Alias: $vs-patient-release-type-moh                  = http://fhir.health.gov.il/ValueSet/patient-release-type-moh
+Alias: $vs-patient-relationship-type =  http://fhir.health.gov.il/ValueSet/patient-relationship-type
 
 // Profiles from IL Core
 Alias: $ILLocation                                   = http://fhir.health.gov.il/StructureDefinition/il-core-location
