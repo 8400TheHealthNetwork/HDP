@@ -1,7 +1,7 @@
 Instance: guardian
 InstanceOf: ILHDPRelatedPerson
-Title: "Example ILCore RelatedPerson"
-Description: "An example instance of the ILCore RelatedPerson profile."
+Title: "Example ILHDP RelatedPerson"
+Description: "An example instance of the ILHDP RelatedPerson profile referencing an HDP Patient."
 * meta.security[HDP].system = $info-buckets
 * meta.security[HDP].code = #patientDemographics
 * meta.security[HDP].display = "דמוגרפיה"

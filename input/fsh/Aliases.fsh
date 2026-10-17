@@ -64,6 +64,7 @@ Alias: $payer =                                        http://fhir.health.gov.il
 Alias: $city-code =                                    http://fhir.health.gov.il/cs/city-symbol
 Alias: $alternet-reference =                           http://hl7.org/fhir/StructureDefinition/alternate-reference
 Alias: $info-buckets =                                 http://fhir.health.gov.il/cs/il-hdp-information-buckets
+Alias: $hdp-resource-tags =             http://fhir.health.gov.il/cs/il-hdp-resource-tags
 Alias: $ucum =                                         http://unitsofmeasure.org
 Alias: $obs-cat =                                      http://terminology.hl7.org/CodeSystem/observation-category
 Alias: $condition-category                           = http://terminology.hl7.org/CodeSystem/condition-category
