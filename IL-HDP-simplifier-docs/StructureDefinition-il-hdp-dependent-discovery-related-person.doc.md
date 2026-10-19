@@ -23,7 +23,7 @@ Require exactly one `meta.tag` entry with this system/code pair, defined by [IL 
 }
 ```
 
-The tag means that the HMO maintains the relationship record under the dependent-discovery contract. Tagged RelatedPerson resources SHALL conform to this profile independently of any `meta.profile` declaration. The HMO SHALL preserve the tag in discovery projections and retain it on inactive records. Additional tags are allowed. An untagged record, or a tagged record that fails the required checks, cannot establish discovery eligibility.
+The tag means that the HMO maintains the relationship record under the dependent-discovery contract. Tagged RelatedPerson resources SHALL conform to this profile independently of any `meta.profile` declaration. The HMO SHALL preserve the tag in discovery projections. Inactive discovery records may retain it. Remove the tag when a still-active relationship is no longer eligible for discovery; keep `active=true`. Additional tags are allowed. An untagged record, or a tagged record that fails the required checks, cannot establish discovery eligibility.
 
 The tag selects the applicable requirements; it does not establish current eligibility, clinical-access permission or authority to approve Consent. It is separate from the inherited `patientDemographics` security label, which remains required.
 
@@ -36,17 +36,21 @@ The tag selects the applicable requirements; it does not establish current eligi
 | `identifier` | Identifies the representative, not the dependent. At least one actual value with the Israeli national-ID system, Palestinian national-ID system (`http://fhir.health.gov.il/identifier/pna-national-id`, inherited `pna-id` slice), an issuing-country passport system in the IL Core [passport URI value set](https://simplifier.net/ilcore/passport-uri), or `http://fhir.health.gov.il/identifier/il-hdp-test-id` with value `1` or `2`. Inherited identifier constraints apply. |
 | `patient.reference` | Resolvable relative `Patient/{id}` reference to the dependent's [ILHDPPatient](https://simplifier.net/hdp-il/ILHDPPatient) on the same HMO server. Identifier-only, contained and cross-server references are insufficient. |
 | `active` | An actual boolean is required; DAR is insufficient. `false` records remain valid instances of this profile but cannot establish current discovery eligibility. |
-| `relationship` | One or more coded concepts, each with an actual coding system and code. The inherited required IL Core [patient relationship type](https://simplifier.net/ilcore/patient-relationship-type) binding applies. |
+| `relationship` | One or more coded concepts, each with an actual coding system and code. Required binding to [ILHDP Dependent Discovery Relationship Type](https://simplifier.net/hdp-il/il-hdp-dependent-discovery-relationship-type): `http://terminology.hl7.org/CodeSystem/v3-RoleCode|PRN` (parent) or `http://terminology.hl7.org/CodeSystem/v3-RoleCode|GUARD` (guardian). |
 
 Synthetic integration-test records SHALL carry `http://terminology.hl7.org/CodeSystem/v3-ActReason|HTEST` and refer only to synthetic Patients. HMO interface support for synthetic identifiers does not permit synthetic PCM portal login; the existing authorization and trusted-context requirements still apply.
 
 Expose one logical discovery record per representative/dependent pair. The representative identifier may occur on records for multiple dependents, and multiple relationship concepts may describe a pair. The HMO must enforce pair uniqueness, stable identity and reference resolution; resource validation alone cannot establish these server-level properties.
 
-The HMO maintains the discovery record's active state as applicable periods, age/role conditions and revocations change. PCM checks `active=true` and an eligible relationship on the same tagged record; it does not evaluate `period`. The eligible relationship subset and authoritative mappings are agreed with the PCM workflow owner. Membership in the broader national relationship value set does not establish eligibility, and unknown or unmapped roles fail closed. An inactive discovery record does not assert that a biological relationship has ended. Current authority must be checked separately before sensitive representative actions.
+The HMO maintains the record's active state and discovery tag as applicable periods, age/role conditions and revocations change. PCM checks `active=true` and a supported parent or guardian relationship on the same tagged record; it does not evaluate `period`. Other relationship types do not establish eligibility. Current authority must be checked separately before sensitive representative actions.
 
 ## Complete resources and response projections
 
 This is a complete-resource profile. Other fields allowed by ILHDPRelatedPerson, including name, telecom, address and period, remain allowed; they are not prohibited merely because discovery does not request them. The resource also conforms to ILHDPRelatedPerson, so an additional duplicate resource is not required solely because of the child profile.
+
+If the relationship evidence remains active but can no longer be used for dependent discovery, for example because the dependent has passed the applicable legal age, remove the `hmo-dependent-discovery` tag and keep `active=true`. The underlying relationship remains available for other uses. Set `active=false` only when the record itself is no longer in active use.
+
+Alternatively, maintain a separate RelatedPerson resource for relationship evidence independently of discovery, at the cost of duplicating the data.
 
 PCM receives the agreed search projection rather than all optional content. Preserve the resource tag, resource identity, mandatory and modifier elements, and required security/processing metadata. Apply the standard SUBSETTED marker when appropriate, and do not use a projected response as a complete replacement. Follow the linked PCM guide for the exact requests and response rules.
 
@@ -54,3 +58,4 @@ PCM receives the agreed search projection rather than all optional content. Pres
 
 - [Active guardian](https://simplifier.net/hdp-il/hdp-dependent-discovery-guardian): includes optional name and telecom content in the complete record.
 - [Inactive parent record](https://simplifier.net/hdp-il/hdp-dependent-discovery-inactive-parent): retains the discriminator tag while remaining ineligible for discovery.
+- [Active parent outside discovery](https://simplifier.net/hdp-il/hdp-related-person-parent-outside-discovery): preserves the active relationship after removing the discovery tag.

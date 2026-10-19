@@ -30,6 +30,7 @@ Alias: $vs-info-buckets =  http://fhir.health.gov.il/ValueSet/il-hdp-information
 Alias: $vs-v3-confidentiality-classification = http://terminology.hl7.org/ValueSet/v3-ConfidentialityClassification
 Alias: $vs-il-core-sensitivity-labels = http://fhir.health.gov.il/ValueSet/il-core-sensitivity-labels
 Alias: $vs-il-hdp-condition-code =  http://hdp.fhir.health.gov.il/ValueSet/il-hdp-condition-code
+Alias: $vs-il-hdp-dependent-discovery-relationship-type = http://hdp.fhir.health.gov.il/ValueSet/il-hdp-dependent-discovery-relationship-type
 Alias: $vs-observation-meta =  http://hdp.fhir.health.gov.il/ValueSet/il-hdp-observation-information-buckets
 Alias: $vs-observation-lab-meta =  http://hdp.fhir.health.gov.il/ValueSet/il-hdp-observation-lab-information-buckets
 Alias: $vs-service-request-meta =  http://hdp.fhir.health.gov.il/ValueSet/il-hdp-service-request-information-buckets
