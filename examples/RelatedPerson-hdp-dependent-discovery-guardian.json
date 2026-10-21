@@ -1,0 +1,73 @@
+{
+  "resourceType": "RelatedPerson",
+  "id": "hdp-dependent-discovery-guardian",
+  "meta": {
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "patientDemographics",
+        "display": "דמוגרפיה"
+      }
+    ],
+    "tag": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-resource-tags",
+        "code": "hmo-dependent-discovery"
+      }
+    ],
+    "profile": [
+      "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-dependent-discovery-related-person"
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "strong-id",
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+          }
+        ]
+      },
+      "system": "http://fhir.health.gov.il/identifier/il-national-id",
+      "value": "000000026"
+    }
+  ],
+  "relationship": [
+    {
+      "coding": [
+        {
+          "code": "GUARD",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+          "display": "Guardian"
+        }
+      ]
+    }
+  ],
+  "name": [
+    {
+      "given": [
+        "Alex"
+      ],
+      "extension": [
+        {
+          "url": "http://hl7.org/fhir/StructureDefinition/language",
+          "valueCode": "en"
+        }
+      ],
+      "family": "Cohen",
+      "use": "official"
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "+972501234567",
+      "use": "mobile"
+    }
+  ],
+  "active": true,
+  "patient": {
+    "reference": "Patient/patient-with-israeli-id"
+  }
+}
