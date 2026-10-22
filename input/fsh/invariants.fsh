@@ -10,7 +10,7 @@ Severity: #error
 
 Invariant: effective-start-end
 Description: "effectivePeriod.start and effectivePeriod.end SHALL have a value if extension:courseOfTherapyType is 'chronic' and status is 'stopped'"
-Expression: "status = 'stopped' and extension('http://fhir.health.gov.il/StructureDefinition/ext-medication-course-of-therapy-type').value.ofType(CodeableConcept).coding.where(system = 'http://fhir.health.gov.il/cs/il-core-medication-course-of-therapy-type' and code = 'chronic').exists() implies (effectivePeriod.start.exists() and effectivePeriod.end.exists())"
+Expression: "status = 'stopped' and extension('http://fhir.health.gov.il/StructureDefinition/ext-medication-course-of-therapy-type').value.ofType(CodeableConcept).coding.where(system = 'http://fhir.health.gov.il/cs/il-core-medication-course-of-therapy-type' and code = 'chronic').exists() implies (effective.ofType(Period).start.exists() and effective.ofType(Period).end.exists())"
 Severity: #warning
 
 Invariant: check-identifiers
