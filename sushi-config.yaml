@@ -28,6 +28,8 @@ dependencies:
   il.core.fhir.r4: 
     uri: http://fhir.health.gov.il/ImplementationGuide/il.core.fhir.r4
     version: 0.21.0
+    # Before publication, update to an IL-CORE release containing
+    # http://fhir.health.gov.il/cs/il-hdp-resource-tags.
 # The pages property corresponds to IG.definition.page. SUSHI can
 # auto-generate the page list, but if the author includes pages in
 # this file, it is assumed that the author will fully manage the

@@ -102,3 +102,28 @@ Invariant: il-dosage-dose-required-when-no-substeps
 Description: "If ext-sub-dosage-step extension is NOT present on Dosage, doseAndRate SHALL be present."
 Severity: #error
 Expression: "extension('http://fhir.health.gov.il/StructureDefinition/ext-sub-dosage-step').exists().not() implies doseAndRate.exists()"
+
+Invariant: hdp-discovery-identifier
+Description: "A discovery record SHALL include a representative identifier with an actual value and an Israeli national-ID, Palestinian national-ID (pna-id), recognized issuing-country passport system, or one of the two exact synthetic test identifiers."
+Severity: #error
+Expression: "identifier.where(value.hasValue() and (system = 'http://fhir.health.gov.il/identifier/il-national-id' or system = 'http://fhir.health.gov.il/identifier/pna-national-id' or system.memberOf('http://fhir.health.gov.il/ValueSet/passport-uri') or (system = 'http://fhir.health.gov.il/identifier/il-hdp-test-id' and (value = '1' or value = '2')))).exists()"
+
+Invariant: hdp-discovery-test-security-label
+Description: "A discovery record carrying a synthetic test identifier SHALL carry HTEST."
+Severity: #error
+Expression: "identifier.where(system = 'http://fhir.health.gov.il/identifier/il-hdp-test-id').exists() implies meta.security.where(system = 'http://terminology.hl7.org/CodeSystem/v3-ActReason' and code = 'HTEST').exists()"
+
+Invariant: hdp-discovery-active
+Description: "Discovery requires an actual active boolean; a data-absent-reason extension is insufficient."
+Severity: #error
+Expression: "active.hasValue()"
+
+Invariant: hdp-discovery-local-patient
+Description: "The dependent reference SHALL have the relative form Patient/{id} on the same server."
+Severity: #error
+Expression: "hasValue() and matches('^Patient/[A-Za-z0-9.-]{1,64}$')"
+
+Invariant: hdp-discovery-relationship-coding
+Description: "A relationship coding SHALL contain actual system and code values."
+Severity: #error
+Expression: "system.hasValue() and code.hasValue()"
