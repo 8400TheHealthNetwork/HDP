@@ -31,6 +31,7 @@
       }
     }
   ],
+  "status": "final",
   "category": [
     {
       "coding": [
@@ -61,12 +62,17 @@
     ]
   },
   "subject": {
+    "reference": "Patient/patient-with-israeli-id",
     "identifier": {
       "system": "http://fhir.health.gov.il/identifier/il-national-id",
       "value": "000000018"
-    },
-    "reference": "Patient/patient-with-israeli-id"
+    }
   },
+  "encounter": {
+    "reference": "Encounter/example"
+  },
+  "effectiveDateTime": "2025-09-10T09:30:00+02:00",
+  "issued": "2025-09-10T10:00:00+02:00",
   "performer": [
     {
       "reference": "Practitioner/example"
@@ -75,6 +81,12 @@
       "reference": "Organization/example"
     }
   ],
+  "specimen": {
+    "reference": "Specimen/serum-patient"
+  },
+  "device": {
+    "reference": "Device/example"
+  },
   "valueQuantity": {
     "value": 110,
     "unit": "mg/dL",
@@ -96,17 +108,5 @@
         "unit": "mg/dL"
       }
     }
-  ],
-  "status": "final",
-  "encounter": {
-    "reference": "Encounter/example"
-  },
-  "effectiveDateTime": "2025-09-10T09:30:00+02:00",
-  "issued": "2025-09-10T10:00:00+02:00",
-  "specimen": {
-    "reference": "Specimen/serum-patient"
-  },
-  "device": {
-    "reference": "Device/example"
-  }
+  ]
 }

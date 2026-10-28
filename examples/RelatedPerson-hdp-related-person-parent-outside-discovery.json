@@ -1,0 +1,45 @@
+{
+  "resourceType": "RelatedPerson",
+  "id": "hdp-related-person-parent-outside-discovery",
+  "meta": {
+    "security": [
+      {
+        "system": "http://fhir.health.gov.il/cs/il-hdp-information-buckets",
+        "code": "patientDemographics",
+        "display": "דמוגרפיה"
+      }
+    ],
+    "profile": [
+      "http://hdp.fhir.health.gov.il/StructureDefinition/il-hdp-related-person"
+    ]
+  },
+  "identifier": [
+    {
+      "type": {
+        "coding": [
+          {
+            "code": "strong-id",
+            "system": "http://fhir.health.gov.il/cs/il-core-identifier-type"
+          }
+        ]
+      },
+      "system": "http://fhir.health.gov.il/identifier/il-national-id",
+      "value": "000000034"
+    }
+  ],
+  "relationship": [
+    {
+      "coding": [
+        {
+          "code": "PRN",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+          "display": "parent"
+        }
+      ]
+    }
+  ],
+  "active": true,
+  "patient": {
+    "reference": "Patient/patient-with-israeli-id"
+  }
+}
